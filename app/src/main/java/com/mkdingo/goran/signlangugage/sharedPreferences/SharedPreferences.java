@@ -12,18 +12,21 @@ import com.mkdingo.goran.signlangugage.klasi.User;
 
 public class SharedPreferences {
 
-    private static final String addUser = "name";
-    private static android.content.SharedPreferences getPreferences(Context context) {
-        return context.getApplicationContext().getSharedPreferences("MySharedPreffsFile", Activity.MODE_PRIVATE);
+    private static android.content.SharedPreferences getPreferences(Context c){
+        return c.getApplicationContext().getSharedPreferences("UserPreferences", Activity.MODE_PRIVATE);
     }
 
-    public static void addUser (User user, Context context){
+    public static void addUser(User user, Context c){
+
         Gson gson = new Gson();
         String mapString = gson.toJson(user);
-        getPreferences(context).edit().putString("USER",mapString).apply();
+        getPreferences(c).edit().putString("User", mapString).apply();
+
+
     }
 
-    public static String getAddUser() {
-        return addUser;
+    public static User getUser(Context c){
+
+        return new Gson().fromJson(getPreferences(c).getString("User", ""), User.class);
     }
 }

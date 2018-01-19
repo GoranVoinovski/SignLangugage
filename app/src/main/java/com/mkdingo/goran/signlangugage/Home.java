@@ -13,8 +13,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mkdingo.goran.signlangugage.klasi.User;
+import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,8 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        user = SharedPreferences.getUser(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
