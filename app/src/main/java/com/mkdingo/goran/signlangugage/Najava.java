@@ -20,5 +20,6 @@ public class Najava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
+
     }
 }
