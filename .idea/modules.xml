@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SignLangugage.iml" filepath="$PROJECT_DIR$/SignLangugage.iml" />
-      <module fileurl="file://C:\Users\Anti\Desktop\ASignLangugage\SignLangugage\SignLangugage.iml" filepath="C:\Users\Anti\Desktop\ASignLangugage\SignLangugage\SignLangugage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
