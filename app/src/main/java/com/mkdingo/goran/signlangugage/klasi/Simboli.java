@@ -7,5 +7,5 @@ import java.io.Serializable;
  */
 
 public class Simboli implements Serializable{
-    char karakteri;
+    public char karakteri;
 }

@@ -7,5 +7,5 @@ import java.io.Serializable;
  */
 
 public class Content implements Serializable {
-    int Slika;
+   public int Slika;
 }

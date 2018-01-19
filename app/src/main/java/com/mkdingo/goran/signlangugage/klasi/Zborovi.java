@@ -1,12 +1,13 @@
 package com.mkdingo.goran.signlangugage.klasi;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Oliver on 1/19/2018.
  */
 
-public class Zborovi {
+public class Zborovi implements Serializable{
   public ArrayList<Content> contents;
   public String text;
   public ArrayList<Simboli> bukvi;

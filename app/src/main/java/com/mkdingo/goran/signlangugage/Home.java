@@ -48,7 +48,7 @@ public class Home extends AppCompatActivity
             @Override
             public void onRowClick(Zborovi model, int position) {
                 Intent intent = new Intent(Home.this, FragmentActivity.class);
-                intent.putExtra("EXTRA", model);
+                intent.putExtra("EXTRA",model);
                 intent.putExtra("POSITION", position);
                 startActivity(intent);
             }
