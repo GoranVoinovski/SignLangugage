@@ -1,11 +1,8 @@
 package com.mkdingo.goran.signlangugage;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,18 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mkdingo.goran.signlangugage.adapter.RecyclerViewAdapter;
-import com.mkdingo.goran.signlangugage.klasi.Zborovi;
-import com.mkdingo.goran.signlangugage.listener.OnRowClickListener;
-
-import butterknife.BindView;
-
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    @BindView(R.id.recyclerView)
-    RecyclerView recyclerView;
-    RecyclerViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,30 +28,6 @@ public class Home extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        adapter = new RecyclerViewAdapter(this, OnRowClickListener);
-
-
-        adapter.(new OnRowClickListener() {
-            @Override
-            public void onRowClick(Zborovi model, int position) {
-                Intent intent = new Intent(Home.this, FragmentActivity.class);
-                intent.putExtra("EXTRA",model);
-                intent.putExtra("POSITION", position);
-                startActivity(intent);
-            }
-        });
-
-        adapter.setItems(getList());
-
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
-
-
-
-
-
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
