@@ -7,7 +7,7 @@ import android.widget.EditText;
 import butterknife.BindView;
 
 public class Najava extends AppCompatActivity {
-    @BindView(R.id.edtname)EditText USerName;
+    @BindView(R.id.edtname)EditText userName;
 
 
     @Override
