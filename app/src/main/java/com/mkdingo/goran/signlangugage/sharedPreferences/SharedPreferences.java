@@ -1,4 +1,4 @@
-package com.mkdingo.goran.signlangugage.SharedPreferences;
+package com.mkdingo.goran.signlangugage.sharedPreferences;
 
 import android.app.Activity;
 import android.content.Context;

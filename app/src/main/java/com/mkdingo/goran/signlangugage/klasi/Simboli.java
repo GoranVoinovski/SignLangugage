@@ -1,4 +1,4 @@
-package com.mkdingo.goran.signlangugage.Klasi;
+package com.mkdingo.goran.signlangugage.klasi;
 
 import java.io.Serializable;
 
