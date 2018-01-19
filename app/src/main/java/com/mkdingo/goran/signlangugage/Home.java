@@ -15,10 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.adapter.RecyclerViewAdapter;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.listener.OnRowClickListener;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 
@@ -27,6 +30,7 @@ public class Home extends AppCompatActivity
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
     RecyclerViewAdapter adapter;
+    ArrayList<Zborovi> zborovi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +68,13 @@ public class Home extends AppCompatActivity
         recyclerView.setAdapter(adapter);
 
 
+    }
+    ArrayList<Zborovi> getList() {
+        if (zborovi !=null && zborovi.isEmpty()) {
+            Toast.makeText(this, "empty menu", Toast.LENGTH_SHORT).show();
+        } else {
+
+        }return zborovi;
     }
 
 
