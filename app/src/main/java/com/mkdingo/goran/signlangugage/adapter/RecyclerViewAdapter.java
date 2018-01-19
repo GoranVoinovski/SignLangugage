@@ -31,9 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     OnRowClickListener _OnRowClickListener;
 
-    public void set_OnRowClickListener(OnRowClickListener _OnRowClickListener){
-        this._OnRowClickListener = _OnRowClickListener;
-    }
+
 
 
 
@@ -51,8 +49,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
     }
-    public RecyclerViewAdapter (Context context) {
+    public RecyclerViewAdapter (Context context, OnRowClickListener _OnRowClickListener) {
         this.context = context;
+        this._OnRowClickListener = _OnRowClickListener;
     }
 
     public void setItems(List<Zborovi> zborovi){
