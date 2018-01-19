@@ -3,4 +3,10 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="save">Save</string>
     <string name="what_is_your_name">what is your name?</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

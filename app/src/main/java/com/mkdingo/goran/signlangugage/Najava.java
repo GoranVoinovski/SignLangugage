@@ -8,7 +8,7 @@ import butterknife.BindView;
 
 public class Najava extends AppCompatActivity {
     @BindView(R.id.edtname)EditText userName;
-    @BindView(R.id.edtname)EditText sdasdasddasdame;
+    @BindView(R.id.save)EditText saveUser;
 
 
     @Override
