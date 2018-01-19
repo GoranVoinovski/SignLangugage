@@ -9,7 +9,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import com.mkdingo.goran.signlangugage.Home;
 import com.mkdingo.goran.signlangugage.R;
+import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.listener.OnRowClickListener;
 import com.squareup.picasso.Picasso;
@@ -27,12 +29,21 @@ import butterknife.ButterKnife;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
     Context context;
+    User user;
     List<Zborovi> listazborovi = new ArrayList<>();
 
     OnRowClickListener _OnRowClickListener;
 
 
+    public RecyclerViewAdapter (Context context, OnRowClickListener _OnRowClickListener) {
+        this.context = context;
+        this._OnRowClickListener = _OnRowClickListener;
+    }
 
+    public void setItems(List<Zborovi> zborovi){
+
+        this.listazborovi = zborovi;
+    }
 
 
 
@@ -49,15 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
     }
-    public RecyclerViewAdapter (Context context, OnRowClickListener _OnRowClickListener) {
-        this.context = context;
-        this._OnRowClickListener = _OnRowClickListener;
-    }
 
-    public void setItems(List<Zborovi> zborovi){
-
-        this.listazborovi = zborovi;
-    }
 
     @Override
     public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, final int position) {

@@ -1,6 +1,7 @@
 package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,19 +19,20 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.adapter.RecyclerViewAdapter;
+import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.listener.OnRowClickListener;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    @BindView(R.id.recyclerView)
-    RecyclerView recyclerView;
+    @BindView(R.id.MyRV)RecyclerView rv;
     RecyclerViewAdapter adapter;
-    ArrayList<Zborovi> zborovi;
+    public User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +40,13 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        ButterKnife.bind(this);
+        user = com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences.getUser(this);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         adapter = new RecyclerViewAdapter(this, new OnRowClickListener() {
             @Override
@@ -61,21 +61,20 @@ public class Home extends AppCompatActivity
 
 
 
-        adapter.setItems(getList());
+        adapter.setItems(user.zborovi);
 
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.setAdapter(adapter);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+
 
 
     }
-    ArrayList<Zborovi> getList() {
-        if (zborovi !=null && zborovi.isEmpty()) {
-            Toast.makeText(this, "empty menu", Toast.LENGTH_SHORT).show();
-        } else {
 
-        }return zborovi;
-    }
 
 
     @Override

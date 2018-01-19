@@ -12,6 +12,7 @@ public class Zborovi implements Serializable{
   public String text;
   public ArrayList<Simboli> bukvi;
 
+
     public ArrayList<Content> getContents() {
         return contents;
     }
