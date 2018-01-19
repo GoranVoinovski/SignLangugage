@@ -33,6 +33,9 @@ public class Najava extends AppCompatActivity {
 
     @OnClick(R.id.save)
     public void SaveUser(){
+        
+
+
         User user = new User();
         user.name = userName.getText().toString();
         SharedPreferences.addUser(user,Najava.this);
