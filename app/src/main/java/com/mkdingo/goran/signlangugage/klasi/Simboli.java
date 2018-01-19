@@ -1,4 +1,4 @@
-package com.mkdingo.goran.signlangugage.Klasi;
+package com.mkdingo.goran.signlangugage.klasi;
 
 import java.io.Serializable;
 
@@ -8,5 +8,4 @@ import java.io.Serializable;
 
 public class Simboli implements Serializable{
     char karakteri;
-    char ko;
 }
