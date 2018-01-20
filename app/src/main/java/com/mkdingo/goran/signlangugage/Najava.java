@@ -38,16 +38,22 @@ public class Najava extends AppCompatActivity {
     @OnClick(R.id.save)
     public void SaveUser(){
         Zborovi zbor1 = new Zborovi();
+        Zborovi zbor2 = new Zborovi();
+        Zborovi zbor3 = new Zborovi();
         zbor1.contents = new ArrayList<>();
+        zbor1.bukvi = new ArrayList<>();
         zbor1.text = "Hello";
         Content content1 = new Content();
         content1.Slika = R.raw.yellow;
         zbor1.contents.add(content1);
-
+        zbor2 = zbor1;
+        zbor3 = zbor2;
 
         User user = new User();
         user.zborovi = new ArrayList<>();
         user.zborovi.add(zbor1);
+        user.zborovi.add(zbor2);
+        user.zborovi.add(zbor3);
         user.name = userName.getText().toString();
         SharedPreferences.addUser(user,Najava.this);
         Intent intent = new Intent(Najava.this, Home.class);
