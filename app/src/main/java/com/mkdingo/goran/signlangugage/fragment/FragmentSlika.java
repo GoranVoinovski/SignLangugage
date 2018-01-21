@@ -44,14 +44,18 @@ public class FragmentSlika extends Fragment {
         View view = inflater.inflate(R.layout.fragment_slika, null);
         mUnbind = ButterKnife.bind(this, view);
 
-        zborovi.slika = getArguments().getString("sliki");
+        zborovi.slika = getArguments().getInt("sliki");
+        zborovi.tag = getArguments().getString("tag");
 
-//        if (!zborovi.slika.contains(".gif")){
-//            Picasso.with(getActivity()).load(zborovi.slika).into(pic);
-//
-//        }else {
-            Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
-       // }
+       if (zborovi.tag.equals("gif")){
+           Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
+        }
+
+       if(zborovi.tag.equals("jpg")){
+
+         Picasso.with(getActivity()).load(zborovi.slika).into(pic);
+      }
+
         tekstodzbor.setText(((FragmentActivity)getActivity()).zborovi.text);
 
         return view;

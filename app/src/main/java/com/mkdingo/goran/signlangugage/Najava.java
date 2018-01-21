@@ -57,7 +57,8 @@ public class Najava extends AppCompatActivity {
         zbor1.bukvi = new ArrayList<>();
         zbor1.text = "Hello";
         Sliki slikaZbor1 = new Sliki();
-        slikaZbor1.slika = String.valueOf(R.raw.lettera);
+        slikaZbor1.tag = "jpg";
+        slikaZbor1.slika = R.raw.lettera;
         zbor1.contents.add(slikaZbor1);
 
         Zborovi zbor2 = new Zborovi();
@@ -65,7 +66,8 @@ public class Najava extends AppCompatActivity {
         zbor2.bukvi = new ArrayList<>();
         zbor2.text = "Thank you";
         Sliki slikaZbor2 = new Sliki();
-        slikaZbor2.slika = String.valueOf(R.raw.gif1);
+        slikaZbor2.slika = R.raw.gif1;
+        slikaZbor2.tag = "gif";
         zbor2.contents.add(slikaZbor2);
 
         Zborovi zbor3 = new Zborovi();
@@ -73,7 +75,8 @@ public class Najava extends AppCompatActivity {
         zbor3.bukvi = new ArrayList<>();
         zbor3.text = "Turn left";
         Sliki slikaZbor3 = new Sliki();
-        slikaZbor3.slika = String.valueOf(R.raw.turnleftred);
+        slikaZbor3.tag = "jpg";
+        slikaZbor3.slika = R.raw.turnleftred;
         zbor3.contents.add(slikaZbor3);
 
         Zborovi zbor4 = new Zborovi();
@@ -81,7 +84,8 @@ public class Najava extends AppCompatActivity {
         zbor4.bukvi = new ArrayList<>();
         zbor4.text = "Turn right";
         Sliki slikaZbor4 = new Sliki();
-        slikaZbor4.slika = String.valueOf(R.raw.turnrightblue);
+        slikaZbor4.tag = "jpg";
+        slikaZbor4.slika = R.raw.turnrightblue;
         zbor4.contents.add(slikaZbor4);
 
         user.zborovi.add(zbor1);

@@ -30,6 +30,7 @@ public class VPagerAdapter extends FragmentPagerAdapter{
     public Fragment getItem(int position) {
         Bundle args = new Bundle();
         args.putSerializable("sliki", zborovi.contents.get(position).slika);
+        args.putSerializable("tag", zborovi.contents.get(position).tag);
         args.putInt("pozicija",position);
         FragmentSlika fragment = new FragmentSlika();
         fragment.setArguments(args);

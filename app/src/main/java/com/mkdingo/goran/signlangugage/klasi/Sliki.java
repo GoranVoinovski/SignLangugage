@@ -8,5 +8,6 @@ import java.io.Serializable;
 
 public class Sliki implements Serializable{
 
-   public String slika;
+   public int slika;
+   public String tag;
 }
