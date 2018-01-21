@@ -18,7 +18,7 @@ public class FragmentActivity extends AppCompatActivity {
     @BindView(R.id.vPager)ViewPager viewPager;
     VPagerAdapter adapter;
     User user;
-    Zborovi zborovi;
+    public Zborovi zborovi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,7 @@ public class FragmentActivity extends AppCompatActivity {
         adapter = new VPagerAdapter(this.getSupportFragmentManager());
         Intent intent = getIntent();
         zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
+
 
 
 
