@@ -3,10 +3,14 @@
     android:id="@+id/relative"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:background="@color/color1"
+    android:layout_margin="2dp"
+    android:layout_height="100dp">
 
     <TextView
         android:id="@+id/text"
+        android:textColor="@android:color/white"
+        style="@style/Base.TextAppearance.AppCompat.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
