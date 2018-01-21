@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.mkdingo.goran.signlangugage.fragment.FragmentSlika;
+import com.mkdingo.goran.signlangugage.klasi.Sliki;
+import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 
 import java.util.ArrayList;
@@ -15,10 +17,9 @@ import java.util.ArrayList;
  */
 
 public class VPagerAdapter extends FragmentPagerAdapter{
-    Zborovi zboroviModel = new Zborovi();
-    ArrayList<Zborovi> zborovi = new ArrayList<>();
+    Zborovi zborovi = new Zborovi();
 
-    public void addSliki(ArrayList<Integer> content){zboroviModel.contents = content;}
+    public void addSliki(ArrayList<Sliki> content){zborovi.contents = content;}
 
 
     public VPagerAdapter(FragmentManager fm) {
@@ -28,9 +29,7 @@ public class VPagerAdapter extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
         Bundle args = new Bundle();
-        args.putString("zbor", zborovi.get(position).text);
-        args.putSerializable("sliki", zborovi.get(position).contents);
-        args.putSerializable("bukci", zborovi.get(position).bukvi);
+        args.putSerializable("sliki", zborovi.contents.get(position).slika);
         args.putInt("pozicija",position);
         FragmentSlika fragment = new FragmentSlika();
         fragment.setArguments(args);
@@ -39,6 +38,6 @@ public class VPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return zborovi.size();
+        return zborovi.contents.size();
     }
 }

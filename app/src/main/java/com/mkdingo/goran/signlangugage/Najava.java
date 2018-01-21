@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mkdingo.goran.signlangugage.klasi.Sliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
@@ -55,29 +56,33 @@ public class Najava extends AppCompatActivity {
         zbor1.contents = new ArrayList<>();
         zbor1.bukvi = new ArrayList<>();
         zbor1.text = "Hello";
-        int SlikaZbor1 = R.raw.yellow;
-        zbor1.contents.add(SlikaZbor1);
+        Sliki slikaZbor1 = new Sliki();
+        slikaZbor1.slika = R.raw.lettera;
+        zbor1.contents.add(slikaZbor1);
 
         Zborovi zbor2 = new Zborovi();
         zbor2.contents = new ArrayList<>();
         zbor2.bukvi = new ArrayList<>();
         zbor2.text = "Thank you";
-        int SlikaZbor2 = R.raw.thankyoublue;
-        zbor1.contents.add(SlikaZbor2);
+        Sliki slikaZbor2 = new Sliki();
+        slikaZbor2.slika = R.raw.thankyoublue;
+        zbor2.contents.add(slikaZbor2);
 
         Zborovi zbor3 = new Zborovi();
         zbor3.contents = new ArrayList<>();
         zbor3.bukvi = new ArrayList<>();
         zbor3.text = "Turn left";
-        int SlikaZbor3 = R.raw.turnleftred;
-        zbor1.contents.add(SlikaZbor3);
+        Sliki slikaZbor3 = new Sliki();
+        slikaZbor3.slika = R.raw.turnleftred;
+        zbor3.contents.add(slikaZbor3);
 
         Zborovi zbor4 = new Zborovi();
         zbor4.contents = new ArrayList<>();
         zbor4.bukvi = new ArrayList<>();
         zbor4.text = "Turn right";
-        int SlikaZbor4 = R.raw.turnrightblue;
-        zbor1.contents.add(SlikaZbor4);
+        Sliki slikaZbor4 = new Sliki();
+        slikaZbor4.slika = R.raw.turnrightblue;
+        zbor4.contents.add(slikaZbor4);
 
         user.zborovi.add(zbor1);
         user.zborovi.add(zbor2);

@@ -31,6 +31,7 @@ public class FragmentActivity extends AppCompatActivity {
         zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
 
 
+
         adapter.addSliki(zborovi.contents);
         viewPager.setAdapter(adapter);
 
