@@ -15,10 +15,10 @@ import java.util.ArrayList;
  */
 
 public class VPagerAdapter extends FragmentPagerAdapter{
+    Zborovi zboroviModel = new Zborovi();
+    ArrayList<Zborovi> zborovi = new ArrayList<>();
 
-    ArrayList<Zborovi> zborovi;
-
-    public void addSliki(ArrayList<Zborovi> zbor){zborovi = zbor;}
+    public void addSliki(ArrayList<Integer> content){zboroviModel.contents = content;}
 
 
     public VPagerAdapter(FragmentManager fm) {
@@ -28,9 +28,9 @@ public class VPagerAdapter extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
         Bundle args = new Bundle();
-        args.putString("zbor", zborovi.get(position).getText());
-        args.putSerializable("sliki", zborovi.get(position).getContents());
-        args.putSerializable("bukci", zborovi.get(position).getBukvi());
+        args.putString("zbor", zborovi.get(position).text);
+        args.putSerializable("sliki", zborovi.get(position).contents);
+        args.putSerializable("bukci", zborovi.get(position).bukvi);
         args.putInt("pozicija",position);
         FragmentSlika fragment = new FragmentSlika();
         fragment.setArguments(args);

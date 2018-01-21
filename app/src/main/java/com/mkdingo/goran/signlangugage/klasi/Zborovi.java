@@ -8,16 +8,16 @@ import java.util.ArrayList;
  */
 
 public class Zborovi implements Serializable{
-  public ArrayList<Content> contents;
+  public ArrayList<Integer> contents;
   public String text;
-  public ArrayList<Simboli> bukvi;
+  public ArrayList<Character> bukvi;
 
 
-    public ArrayList<Content> getContents() {
+    public ArrayList<Integer> getContents() {
         return contents;
     }
 
-    public void setContents(ArrayList<Content> contents) {
+    public void setContents(ArrayList<Integer> contents) {
         this.contents = contents;
     }
 
@@ -29,11 +29,11 @@ public class Zborovi implements Serializable{
         this.text = text;
     }
 
-    public ArrayList<Simboli> getBukvi() {
+    public ArrayList<Character> getBukvi() {
         return bukvi;
     }
 
-    public void setBukvi(ArrayList<Simboli> bukvi) {
+    public void setBukvi(ArrayList<Character> bukvi) {
         this.bukvi = bukvi;
     }
 }
