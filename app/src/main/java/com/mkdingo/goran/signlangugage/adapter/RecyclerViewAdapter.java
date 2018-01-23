@@ -1,10 +1,12 @@
 package com.mkdingo.goran.signlangugage.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -85,7 +87,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
         @BindView(R.id.text)
         TextView text;
-        @BindView(R.id.relative)
+        @BindView(R.id.layout3)
         RelativeLayout relative;
 
 

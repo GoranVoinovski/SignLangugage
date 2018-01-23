@@ -8,6 +8,8 @@
     tools:context="com.mkdingo.goran.signlangugage.Home"
     tools:showIn="@layout/app_bar_home">
 
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/MyRV"
         android:layout_width="match_parent"
