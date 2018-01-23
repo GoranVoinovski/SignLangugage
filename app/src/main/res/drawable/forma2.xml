@@ -7,7 +7,7 @@
     <gradient
         android:centerX="35%"
         android:type="linear"
-        android:angle="271"
+        android:angle="270"
         android:startColor="@color/LightSteelBlue"
         />
     <padding

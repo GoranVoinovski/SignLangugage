@@ -29,11 +29,4 @@ public class Zborovi implements Serializable{
         this.text = text;
     }
 
-    public ArrayList<Character> getBukvi() {
-        return bukvi;
-    }
-
-    public void setBukvi(ArrayList<Character> bukvi) {
-        this.bukvi = bukvi;
-    }
 }
