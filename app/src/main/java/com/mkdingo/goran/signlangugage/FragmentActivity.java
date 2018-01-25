@@ -54,17 +54,20 @@ public class FragmentActivity extends AppCompatActivity {
         zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
         viewPager.setCurrentItem(pozicijaBukva);
 
-        if (zborovi.bukvi != null) {
+        if (zborovi.bukvi != null && zborovi.bukvi.size() > 1) {
+
 
             myTextViews = new ArrayList<>();
             tekstodzbor.setVisibility(View.INVISIBLE);
             for (Character c : zborovi.bukvi) {
 
-                textView = new TextView(this);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                textView = new TextView (this);
+                params.setMargins(2,0,2,0);
+                textView.setPadding(5,5,5,5);
+                textView.setLayoutParams(params);
                 textView.setText(c + "");
                 textView.setId(i);
-                textView.setHeight(150);
-                textView.setWidth(150);
                 textView.setTextSize(40);
                 bukviLayout.addView(textView);
                 myTextViews.add(textView);
@@ -76,14 +79,24 @@ public class FragmentActivity extends AppCompatActivity {
 
         }
 
-        for (int i = 0; i < myTextViews.size(); i++) {
+        if (zborovi.bukvi.size() > 1){
+            for (int i = 0; i < myTextViews.size(); i++) {
 
-            if (i == pozicijaBukva){
-                myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-            }else {
-                myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
+                if (i == pozicijaBukva){
+                    myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                    myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
+                    myTextViews.get(i).setTextSize(50);
+
+                }else {
+                    myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
+                    myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                    myTextViews.get(i).setTextSize(40);
+
+                }
             }
         }
+
+
 
         adapter.addSliki(zborovi.contents);
         viewPager.setAdapter(adapter);
@@ -103,8 +116,12 @@ public class FragmentActivity extends AppCompatActivity {
 
                     if (i == pozicijaBukva){
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                        myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
+                        myTextViews.get(i).setTextSize(50);
                     }else {
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
+                        myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                        myTextViews.get(i).setTextSize(40);
                     }
                 }
             }

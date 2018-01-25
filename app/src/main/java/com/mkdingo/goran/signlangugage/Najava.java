@@ -56,16 +56,29 @@ public class Najava extends AppCompatActivity {
         zbor1.bukvi = PopolniLista(user.name);
         Sliki slikaZbor1 = new Sliki();
         Sliki slikaZbor1_2 = new Sliki();
+        Sliki slikaZbor1_3 = new Sliki();
+        Sliki slikaZbor1_4 = new Sliki();
+        Sliki slikaZbor1_5 = new Sliki();
         slikaZbor1.tag = "jpg";
         slikaZbor1_2.tag = "jpg";
+        slikaZbor1_3.tag = "jpg";
+        slikaZbor1_4.tag = "jpg";
+        slikaZbor1_5.tag = "jpg";
         slikaZbor1.slika = R.raw.lettera;
-        slikaZbor1_2.slika = R.raw.lettera;
+        slikaZbor1_2.slika = R.raw.letterb;
+        slikaZbor1_3.slika = R.raw.letterc;
+        slikaZbor1_4.slika = R.raw.letterd;
+        slikaZbor1_5.slika = R.raw.letterd;
         zbor1.contents.add(slikaZbor1);
         zbor1.contents.add(slikaZbor1_2);
+        zbor1.contents.add(slikaZbor1_3);
+        zbor1.contents.add(slikaZbor1_4);
+        zbor1.contents.add(slikaZbor1_5);
 
         Zborovi zbor2 = new Zborovi();
         zbor2.contents = new ArrayList<>();
         zbor2.text = "Thank you";
+        zbor2.bukvi = PopolniLista("");
         Sliki slikaZbor2 = new Sliki();
         slikaZbor2.slika = R.raw.gif1;
         slikaZbor2.tag = "gif";
@@ -74,6 +87,7 @@ public class Najava extends AppCompatActivity {
         Zborovi zbor3 = new Zborovi();
         zbor3.contents = new ArrayList<>();
         zbor3.text = "Turn left";
+        zbor3.bukvi = PopolniLista("");
         Sliki slikaZbor3 = new Sliki();
         slikaZbor3.tag = "jpg";
         slikaZbor3.slika = R.raw.turnleftred;
@@ -82,6 +96,7 @@ public class Najava extends AppCompatActivity {
         Zborovi zbor4 = new Zborovi();
         zbor4.contents = new ArrayList<>();
         zbor4.text = "Turn right";
+        zbor4.bukvi = PopolniLista("");
         Sliki slikaZbor4 = new Sliki();
         slikaZbor4.tag = "jpg";
         slikaZbor4.slika = R.raw.turnrightblue;

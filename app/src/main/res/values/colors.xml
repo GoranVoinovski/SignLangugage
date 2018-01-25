@@ -152,4 +152,6 @@
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
     <color name="BukvaTransparent">#00000000</color>
+    <color name="crnaPoluTranstarent">#64000000</color>
+    <color name="crnaPoluTranstarentodbrana">#bc000000</color>
 </resources>
