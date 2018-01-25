@@ -6,8 +6,8 @@
     android:layout_margin="4dp"
 
     android:orientation="vertical"
-    cardview:cardCornerRadius="10dp"
-    cardview:cardElevation="15dp">
+    cardview:cardCornerRadius="4dp"
+    cardview:cardElevation="5dp">
 
     <RelativeLayout
         android:id="@+id/layout3"
