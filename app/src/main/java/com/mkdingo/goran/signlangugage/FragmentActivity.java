@@ -54,26 +54,30 @@ public class FragmentActivity extends AppCompatActivity {
         zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
         viewPager.setCurrentItem(pozicijaBukva);
 
-        if (zborovi.bukvi != null && zborovi.bukvi.size() > 1) {
+        if (zborovi.bukvi != null) {
+            if (zborovi.bukvi.size()>1){
+                myTextViews = new ArrayList<>();
+                tekstodzbor.setVisibility(View.INVISIBLE);
+                for (Character c : zborovi.bukvi) {
 
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    textView = new TextView (this);
+                    params.setMargins(2,0,2,0);
+                    textView.setPadding(5,5,5,5);
+                    textView.setLayoutParams(params);
+                    textView.setText(c + "");
+                    textView.setId(i);
+                    textView.setTextSize(40);
+                    bukviLayout.addView(textView);
+                    myTextViews.add(textView);
+                    i++;
 
-            myTextViews = new ArrayList<>();
-            tekstodzbor.setVisibility(View.INVISIBLE);
-            for (Character c : zborovi.bukvi) {
+                }
 
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                textView = new TextView (this);
-                params.setMargins(2,0,2,0);
-                textView.setPadding(5,5,5,5);
-                textView.setLayoutParams(params);
-                textView.setText(c + "");
-                textView.setId(i);
-                textView.setTextSize(40);
-                bukviLayout.addView(textView);
-                myTextViews.add(textView);
-                i++;
 
             }
+
+
         } else {
             tekstodzbor.setText(zborovi.text);
 

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
+import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
@@ -24,6 +25,7 @@ public class Najava extends AppCompatActivity {
     @BindView(R.id.save)Button saveUser;
     @BindView(R.id.textView)TextView textView;
     User user;
+    StaticniSliki sliki;
 
 
     @Override
@@ -51,29 +53,9 @@ public class Najava extends AppCompatActivity {
     public void FillClasses(User user){
         user.zborovi = new ArrayList<>();
         Zborovi zbor1 = new Zborovi();
-        zbor1.contents = new ArrayList<>();
+        zbor1.contents = PovleciSlikiZaZbor(PopolniLista(user.name),slikiAzbuka());
         zbor1.text = "I am " + user.name;
         zbor1.bukvi = PopolniLista(user.name);
-        Sliki slikaZbor1 = new Sliki();
-        Sliki slikaZbor1_2 = new Sliki();
-        Sliki slikaZbor1_3 = new Sliki();
-        Sliki slikaZbor1_4 = new Sliki();
-        Sliki slikaZbor1_5 = new Sliki();
-        slikaZbor1.tag = "jpg";
-        slikaZbor1_2.tag = "jpg";
-        slikaZbor1_3.tag = "jpg";
-        slikaZbor1_4.tag = "jpg";
-        slikaZbor1_5.tag = "jpg";
-        slikaZbor1.slika = R.raw.lettera;
-        slikaZbor1_2.slika = R.raw.letterb;
-        slikaZbor1_3.slika = R.raw.letterc;
-        slikaZbor1_4.slika = R.raw.letterd;
-        slikaZbor1_5.slika = R.raw.letterd;
-        zbor1.contents.add(slikaZbor1);
-        zbor1.contents.add(slikaZbor1_2);
-        zbor1.contents.add(slikaZbor1_3);
-        zbor1.contents.add(slikaZbor1_4);
-        zbor1.contents.add(slikaZbor1_5);
 
         Zborovi zbor2 = new Zborovi();
         zbor2.contents = new ArrayList<>();
@@ -120,5 +102,43 @@ public class Najava extends AppCompatActivity {
             charList.add(c);
         }
      return charList;
+    }
+
+    public ArrayList PovleciSlikiZaZbor(ArrayList<Character>charlist,ArrayList<StaticniSliki>listaSliki){
+        ArrayList<Sliki> slikiOdZbor = new ArrayList<>();
+        for (Character c:charlist){
+            for (StaticniSliki sliki : listaSliki) {
+                if (c == sliki.bukva){
+                    slikiOdZbor.add(sliki.Slika);
+                }}
+        }
+        return slikiOdZbor;
+    }
+
+   public ArrayList<StaticniSliki>slikiAzbuka (){
+        ArrayList<StaticniSliki>slikiArrayList = new ArrayList<>();
+        Sliki slika_a = new Sliki();
+        slika_a.slika = R.raw.lettera;
+        slika_a.tag = "jpg";
+        StaticniSliki slikaA = new StaticniSliki(slika_a,'A');
+        slikiArrayList.add(slikaA);
+        Sliki slika_b = new Sliki();
+        slika_b.slika = R.raw.letterb;
+        slika_b.tag = "jpg";
+        StaticniSliki slikaB = new StaticniSliki(slika_b,'B');
+        slikiArrayList.add(slikaB);
+        Sliki slika_c = new Sliki();
+        slika_c.slika = R.raw.letterc;
+        slika_c.tag = "jpg";
+        StaticniSliki slikaC = new StaticniSliki(slika_c,'C');
+        slikiArrayList.add(slikaC);
+        Sliki slika_d = new Sliki();
+        slika_d.slika = R.raw.letterd;
+        slika_d.tag = "jpg";
+        StaticniSliki slikaD = new StaticniSliki(slika_d,'D');
+        slikiArrayList.add(slikaD);
+
+
+        return slikiArrayList;
     }
 }
