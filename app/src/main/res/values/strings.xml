@@ -2,7 +2,7 @@
     <string name="app_name">SignLangugage</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="save">Save</string>
-    <string name="what_is_your_name">What is your name?</string>
+    <string name="what_is_your_name" formatted="true" >What is your name?</string>
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

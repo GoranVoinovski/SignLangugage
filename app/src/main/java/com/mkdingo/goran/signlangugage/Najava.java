@@ -1,6 +1,8 @@
 package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -33,6 +35,10 @@ public class Najava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
+
+
+        Typeface typeface = ResourcesCompat.getFont(this, R.font.latin4);
+        textView.setTypeface(typeface);
 
 
 
