@@ -51,10 +51,20 @@ public class Home extends AppCompatActivity
         adapter = new RecyclerViewAdapter(this, new OnRowClickListener() {
             @Override
             public void onRowClick(Zborovi model, int position) {
-                Intent intent = new Intent(Home.this, FragmentActivity.class);
-                intent.putExtra("EXTRA",model);
-                intent.putExtra("POSITION", position);
-                startActivity(intent);
+                if (model.bukvi.size()>1){
+                    Intent intent1 = new Intent(Home.this, FragmentActivity.class);
+                    intent1.putExtra("EXTRA",model);
+                    intent1.putExtra("POSITION", position);
+                    intent1.putExtra("FLAG", "FLAG");
+                    startActivity(intent1);
+
+
+                }else {
+
+                    Intent intent = new Intent(Home.this, FragmentActivity.class);
+                    intent.putExtra("EXTRA",model);
+                    intent.putExtra("POSITION", position);
+                    startActivity(intent);}
             }
         });
 

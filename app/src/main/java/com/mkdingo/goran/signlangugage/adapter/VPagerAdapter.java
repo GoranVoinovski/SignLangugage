@@ -38,7 +38,5 @@ public class VPagerAdapter extends FragmentPagerAdapter{
     }
 
     @Override
-    public int getCount() {
-        return zborovi.contents.size();
-    }
+    public int getCount() {return zborovi.contents.size();}
 }

@@ -38,6 +38,7 @@ public class FragmentActivity extends AppCompatActivity {
     public int pozicijaBukva = 0;
     TextView textView;
     int i = 0;
+    int pozicijaGif = 0;
     ArrayList<TextView>myTextViews;
     LinearLayout.LayoutParams params;
 
@@ -50,9 +51,21 @@ public class FragmentActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         user = SharedPreferences.getUser(this);
-        adapter = new VPagerAdapter(this.getSupportFragmentManager());
+
         Intent intent = getIntent();
         zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
+        int pozicijaGif = intent.getIntExtra("POSITION",0);
+        if (intent.hasExtra("FLAG")){
+            Intent intent1 = new Intent(this,SplashGifActivity.class);
+            intent1.putExtra("EXTRA",zborovi);
+            intent1.putExtra("POSITION", pozicijaGif);
+            startActivity(intent1);
+            finish();
+        }
+
+
+        adapter = new VPagerAdapter(this.getSupportFragmentManager());
+
         viewPager.setCurrentItem(pozicijaBukva);
 
         if (zborovi.bukvi != null) {
@@ -71,9 +84,12 @@ public class FragmentActivity extends AppCompatActivity {
                     myTextViews.add(textView);
                     i++;
                 }
+            }else {
+                nextbutton.setVisibility(View.INVISIBLE);
+                previousbtn.setVisibility(View.INVISIBLE);
+                tekstodzbor.setText(zborovi.text);
             }
         } else {
-            tekstodzbor.setText(zborovi.text);
         }
 
         if (zborovi.bukvi.size() > 1){
@@ -120,9 +136,16 @@ public class FragmentActivity extends AppCompatActivity {
                         myTextViews.get(i).setTextSize(30);
                     }
                 }
+
+                if (pozicijaBukva == myTextViews.size()){
+                    finish();
+                }
             }
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
