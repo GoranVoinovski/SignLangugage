@@ -25,7 +25,8 @@ import butterknife.ButterKnife;
 
 public class FragmentActivity extends AppCompatActivity {
 
-    @BindView(R.id.vPager)ViewPager viewPager;
+    @BindView(R.id.vPager)
+    ViewPager viewPager;
     VPagerAdapter adapter;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
@@ -38,10 +39,13 @@ public class FragmentActivity extends AppCompatActivity {
     public int pozicijaBukva = 0;
     TextView textView;
     int i = 0;
-    ArrayList<TextView>myTextViews;
+    ArrayList<TextView> myTextViews;
 
     User user;
     public Zborovi zborovi;
+
+//    String space = " ";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,15 +59,15 @@ public class FragmentActivity extends AppCompatActivity {
         viewPager.setCurrentItem(pozicijaBukva);
 
         if (zborovi.bukvi != null) {
-            if (zborovi.bukvi.size()>1){
+            if (zborovi.bukvi.size() > 1) {
                 myTextViews = new ArrayList<>();
                 tekstodzbor.setVisibility(View.INVISIBLE);
                 for (Character c : zborovi.bukvi) {
 
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    textView = new TextView (this);
-                    params.setMargins(2,0,2,0);
-                    textView.setPadding(5,5,5,5);
+                    textView = new TextView(this);
+                    params.setMargins(2, 0, 2, 0);
+                    textView.setPadding(5, 5, 5, 5);
                     textView.setLayoutParams(params);
                     textView.setText(c + "");
                     textView.setId(i);
@@ -83,15 +87,29 @@ public class FragmentActivity extends AppCompatActivity {
 
         }
 
-        if (zborovi.bukvi.size() > 1){
+        if (zborovi.bukvi.size() > 1) {
             for (int i = 0; i < myTextViews.size(); i++) {
 
-                if (i == pozicijaBukva){
-                    myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                    myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
-                    myTextViews.get(i).setTextSize(50);
+                String space = myTextViews.get(i).getText().toString();
 
-                }else {
+                if ( i == pozicijaBukva && space.equals(" ") ) {
+
+                    myTextViews.get(i).setBackgroundColor(R.drawable.gradian_color);
+                    myTextViews.get(i).setVisibility(View.INVISIBLE);
+
+
+
+                        myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                        //  myTextViews.get(i).setBackgroundColor(R.drawable.gradian_color);
+                        // setBackgroundResource(R.drawable.background_tv_odbrano);
+                        myTextViews.get(i).setTextSize(50);
+
+
+                }
+
+                else if ( space.equals(" ")) {
+
+                    myTextViews.get(i).setVisibility(View.INVISIBLE);
                     myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
                     myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
                     myTextViews.get(i).setTextSize(40);
@@ -99,8 +117,6 @@ public class FragmentActivity extends AppCompatActivity {
                 }
             }
         }
-
-
 
         adapter.addSliki(zborovi.contents);
         viewPager.setAdapter(adapter);
@@ -114,15 +130,16 @@ public class FragmentActivity extends AppCompatActivity {
         nextbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            pozicijaBukva++;
-            viewPager.setCurrentItem(pozicijaBukva);
+                pozicijaBukva++;
+                viewPager.setCurrentItem(pozicijaBukva);
                 for (int i = 0; i < myTextViews.size(); i++) {
 
-                    if (i == pozicijaBukva){
+                    if (i == pozicijaBukva) {
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                        myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
+                        myTextViews.get(i).setBackgroundColor(R.drawable.gradian_color);
+                        // myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
                         myTextViews.get(i).setTextSize(50);
-                    }else {
+                    } else {
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
                         myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
                         myTextViews.get(i).setTextSize(40);

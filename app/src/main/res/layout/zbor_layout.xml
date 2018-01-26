@@ -3,17 +3,18 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
+    android:layout_margin="3dp"
 
     android:orientation="vertical"
     cardview:cardCornerRadius="4dp"
-    cardview:cardElevation="5dp">
+    cardview:cardElevation="0dp">
 
     <RelativeLayout
         android:id="@+id/layout3"
+
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/gradian_color_2">
+        android:background="@drawable/forma4">
 
 
         <TextView

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/forma7"
     tools:context="com.mkdingo.goran.signlangugage.Najava">
 
 
@@ -20,11 +21,14 @@
 
     <EditText
         android:id="@+id/edtname"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
+        android:background="@drawable/forma1"
+
+        android:gravity="center"
         android:hint="@string/enter_your_name"
         android:textSize="21sp" />
 
@@ -36,7 +40,7 @@
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/forma2"
+        android:background="@drawable/forma6"
         android:text="@string/save"
         android:textColor="@color/DarkSlateGray" />
 

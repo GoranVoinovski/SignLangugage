@@ -154,4 +154,15 @@
     <color name="BukvaTransparent">#00000000</color>
     <color name="crnaPoluTranstarent">#64000000</color>
     <color name="crnaPoluTranstarentodbrana">#bc000000</color>
+    <color name="trans">#bc8D6E63</color>
+    <color name="trans2"> #00000000</color>
+    <color name="potemna2">#f79b76</color>
+    <color name="potemna3">#e08059</color>
+
+
+
+
+
+
+
 </resources>
