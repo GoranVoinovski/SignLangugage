@@ -1,10 +1,11 @@
 package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -36,12 +37,6 @@ public class Najava extends AppCompatActivity {
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
 
-
-        Typeface typeface = ResourcesCompat.getFont(this, R.font.latin4);
-        textView.setTypeface(typeface);
-
-
-
     }
 
 
@@ -55,6 +50,7 @@ public class Najava extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 
     public void FillClasses(User user){
         user.zborovi = new ArrayList<>();
