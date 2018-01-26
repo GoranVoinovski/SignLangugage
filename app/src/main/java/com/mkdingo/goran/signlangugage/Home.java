@@ -34,6 +34,7 @@ public class Home extends AppCompatActivity
     RecyclerViewAdapter adapter;
     public User user;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

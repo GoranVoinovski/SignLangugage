@@ -28,22 +28,24 @@
         android:id="@+id/prevbtn"
         android:layout_gravity="bottom"
         android:text="prev"
+        android:textColor="@color/White"
 
-        android:background="@drawable/levo3"
+        android:background="@drawable/strelka_levo"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="2dp"
         android:layout_width="70dp"
-        android:layout_height="40dp" />
+        android:layout_height="60dp" />
 
     <Button
         android:id="@+id/nextbtn"
         android:text="next"
-        android:background="@drawable/desno3"
+        android:textColor="@color/White"
+        android:background="@drawable/strelka_denso"
         android:layout_gravity="bottom|right"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="2dp"
         android:layout_width="70dp"
-        android:layout_height="40dp" />
+        android:layout_height="60dp" />
 
 
 
