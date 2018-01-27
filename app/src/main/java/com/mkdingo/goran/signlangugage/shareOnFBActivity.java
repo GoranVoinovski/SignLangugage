@@ -25,7 +25,9 @@ public class shareOnFBActivity extends AppCompatActivity {
     Timer myTimer;
     Zborovi zbor;
     Sliki slika;
+    char a;
     int count = 0;
+    int count2 = 0;
     private Handler mHandler;
 
     @Override
@@ -40,14 +42,13 @@ public class shareOnFBActivity extends AppCompatActivity {
         user = SharedPreferences.getUser(this);
         zbor = user.zborovi.get(0);
 
-        imeSoTekst.setText("I am " + user.name);
-
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 runOnUiThread(new TimerTask() {
                     @Override
                     public void run() {
+
                         slika = zbor.contents.get(count++);
                         slajdSliki.setImageResource(slika.slika);
                         if (count >= zbor.contents.size()){
@@ -57,6 +58,24 @@ public class shareOnFBActivity extends AppCompatActivity {
                 });
             }
         }, 0, 2000);
+
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new TimerTask() {
+                    @Override
+                    public void run() {
+
+                        a = zbor.bukvi.get(count2++);
+                        imeSoTekst.setText("" + a);
+                        if (count2 >= zbor.bukvi.size()){
+                            count2 = 0;
+                        }
+                    }
+                });
+            }
+        }, 0, 2000);
+
 
     }
 }
