@@ -1,5 +1,6 @@
 package com.mkdingo.goran.signlangugage;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -25,6 +26,7 @@ public class shareOnFBActivity extends AppCompatActivity {
     Zborovi zbor;
     Sliki slika;
     int count = 0;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class shareOnFBActivity extends AppCompatActivity {
         setContentView(R.layout.activity_share_on_fb);
 
         ButterKnife.bind(this);
+        mHandler = new Handler();
         myTimer = new Timer();
 
         user = SharedPreferences.getUser(this);
@@ -39,18 +42,21 @@ public class shareOnFBActivity extends AppCompatActivity {
 
         imeSoTekst.setText("I am " + user.name);
 
-        long delay = 2000; //update once per 2 seconds.
-        new Timer().schedule(new TimerTask() {
-
+        new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                slika = zbor.contents.get(count++);
-                slajdSliki.setImageResource(slika.slika);
-                if (count >= zbor.contents.size()){
-                    count = 0;
-                }
+                runOnUiThread(new TimerTask() {
+                    @Override
+                    public void run() {
+                        slika = zbor.contents.get(count++);
+                        slajdSliki.setImageResource(slika.slika);
+                        if (count >= zbor.contents.size()){
+                            count = 0;
+                        }
+                    }
+                });
             }
-        }, 0, delay);
+        }, 0, 2000);
 
     }
 }
