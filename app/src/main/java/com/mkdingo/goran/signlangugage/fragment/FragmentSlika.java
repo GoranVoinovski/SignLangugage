@@ -1,5 +1,6 @@
 package com.mkdingo.goran.signlangugage.fragment;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,8 @@ import butterknife.Unbinder;
 public class FragmentSlika extends Fragment {
     @BindView(R.id.img)
     VideoView pic;
+    @BindView(R.id.img1)
+    ImageView pic1;
     private Unbinder mUnbind;
     Sliki zborovi = new Sliki();
 
@@ -39,6 +42,12 @@ public class FragmentSlika extends Fragment {
 
         zborovi.slika = getArguments().getInt("sliki");
         zborovi.tag = getArguments().getString("tag");
+        pic.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
 
        if (zborovi.tag.equals("gif")){
 //           Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
@@ -48,9 +57,8 @@ public class FragmentSlika extends Fragment {
         }
 
        if(zborovi.tag.equals("jpg")){
-
-           pic.setBackgroundResource(zborovi.slika);
-//         Picasso.with(getActivity()).load(zborovi.slika).into(pic);
+           Picasso.with(getActivity()).load(zborovi.slika).into(pic1);
+           pic.setVisibility(View.GONE);
       }
 
         return view;
