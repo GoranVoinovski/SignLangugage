@@ -138,6 +138,9 @@ public class FragmentActivity extends AppCompatActivity {
                 }
 
                 if (pozicijaBukva == myTextViews.size()){
+                    Intent intent1 = new Intent(FragmentActivity.this,shareOnFBActivity.class);
+                    intent1.putExtra("User", user);
+                    startActivity(intent1);
                     finish();
                 }
             }

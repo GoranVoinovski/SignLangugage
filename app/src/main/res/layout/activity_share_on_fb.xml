@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mkdingo.goran.signlangugage.shareOnFBActivity">
+
+    <ImageView
+        android:id="@+id/slideshow"
+        android:textColor="@color/White"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/LightSalmon"/>
+
+    <TextView
+        android:id="@+id/textSoIme"
+        android:textColor="@color/White"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
 
     <TextView
         android:id="@+id/share_on_fb"
@@ -38,5 +56,7 @@
         android:layout_toRightOf="@id/share_on_tw"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="500dp"/>
+
+
 
 </RelativeLayout>
