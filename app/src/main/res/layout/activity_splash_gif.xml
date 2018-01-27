@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     tools:context="com.mkdingo.goran.signlangugage.SplashGifActivity">
 
+    <RelativeLayout
+        android:id="@+id/rel_oli"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="150dp"
+            android:id="@+id/text_learn_to_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Learn to sign"
+            android:textAlignment="center"/>
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/image_ime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text_learn_to_sign"/>
+
+        <TextView
+            android:id="@+id/change_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:text="Change your name"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:layout_marginTop="400dp"
+            android:id="@+id/button_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="continue"/>
+
+
+
+
+    </RelativeLayout>
     <ImageView
         android:id="@+id/splashGif"
         android:layout_width="match_parent"
@@ -35,3 +74,4 @@
 
 
 </RelativeLayout>
+
