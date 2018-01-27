@@ -7,11 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.mkdingo.goran.signlangugage.R;
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
+import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
@@ -24,7 +26,7 @@ import butterknife.Unbinder;
 
 public class FragmentSlika extends Fragment {
     @BindView(R.id.img)
-    ImageView pic;
+    VideoView pic;
     private Unbinder mUnbind;
     Sliki zborovi = new Sliki();
 
@@ -39,12 +41,16 @@ public class FragmentSlika extends Fragment {
         zborovi.tag = getArguments().getString("tag");
 
        if (zborovi.tag.equals("gif")){
-           Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
+//           Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
+           String path = "android.resource://" + getActivity().getPackageName() + "/" + zborovi.slika;
+           pic.setVideoPath(path);
+           pic.start();
         }
 
        if(zborovi.tag.equals("jpg")){
 
-         Picasso.with(getActivity()).load(zborovi.slika).into(pic);
+           pic.setBackgroundResource(zborovi.slika);
+//         Picasso.with(getActivity()).load(zborovi.slika).into(pic);
       }
 
         return view;

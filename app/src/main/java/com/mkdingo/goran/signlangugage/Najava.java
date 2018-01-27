@@ -64,7 +64,7 @@ public class Najava extends AppCompatActivity {
         zbor2.text = "Thank you";
         zbor2.bukvi = PopolniLista("");
         Sliki slikaZbor2 = new Sliki();
-        slikaZbor2.slika = R.raw.gif1;
+        slikaZbor2.slika = R.raw.thankyoublue;
         slikaZbor2.tag = "gif";
         zbor2.contents.add(slikaZbor2);
 
@@ -74,7 +74,7 @@ public class Najava extends AppCompatActivity {
         zbor3.bukvi = PopolniLista("");
         Sliki slikaZbor3 = new Sliki();
         slikaZbor3.tag = "gif";
-        slikaZbor3.slika = R.raw.leftgif;
+        slikaZbor3.slika = R.raw.turnleftred;
         zbor3.contents.add(slikaZbor3);
 
         Zborovi zbor4 = new Zborovi();
@@ -83,7 +83,7 @@ public class Najava extends AppCompatActivity {
         zbor4.bukvi = PopolniLista("");
         Sliki slikaZbor4 = new Sliki();
         slikaZbor4.tag = "gif";
-        slikaZbor4.slika = R.raw.rightgif;
+        slikaZbor4.slika = R.raw.turnrightblue;
         zbor4.contents.add(slikaZbor4);
 
         user.zborovi.add(zbor1);
