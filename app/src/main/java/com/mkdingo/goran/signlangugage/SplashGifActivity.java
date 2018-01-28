@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,7 +24,7 @@ public class SplashGifActivity extends AppCompatActivity {
 
     @BindView(R.id.splashGif)ImageView gif;
     @BindView(R.id.textNazbor)TextView tekst;
-    @BindView(R.id.next)ImageButton prodolzi;
+    @BindView(R.id.next)Button prodolzi;
     @BindView(R.id.rel_oli)RelativeLayout relativeLayout;
     @BindView(R.id.text_learn_to_sign) TextView learn_to_sign;
     @BindView(R.id.image_ime)TextView imageView;
@@ -63,6 +62,7 @@ public class SplashGifActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         relativeLayout.setVisibility(View.INVISIBLE);
+                        prodolzi.setVisibility(View.VISIBLE);
                         int Slika = R.raw.iam;
                         Glide.with(SplashGifActivity.this).load(Slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(gif);
                         tekst.setText("I AM");
@@ -81,9 +81,6 @@ public class SplashGifActivity extends AppCompatActivity {
       intent.putExtra("EXTRA",zbor);
       intent.putExtra("POSITION", position);
       startActivity(intent);
-
-
-
       finish();
 
 
