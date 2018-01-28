@@ -39,6 +39,8 @@ public class Najava extends AppCompatActivity {
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
 
+
+
         sliki.slikiBukvi = slikiAzbuka();
         SharedPreferences.addAzbuka(sliki,this);
 
