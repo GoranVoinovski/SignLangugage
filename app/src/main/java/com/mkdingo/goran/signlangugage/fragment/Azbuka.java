@@ -64,9 +64,9 @@ public class Azbuka extends Fragment {
             public void onRowClick(StaticniSliki model, int position) {
 
                 Intent intent1 = new Intent(getActivity(), FragmentActivity.class);
-                intent1.putExtra("EXTRA", model);
-                intent1.putExtra("POSITION", position);
-                intent1.putExtra("FLAG", "FLAG");
+                intent1.putExtra("EXTRA2", model);
+                intent1.putExtra("POSITION2", position);
+                intent1.putExtra("FLAG2", "FLAG2");
                 startActivity(intent1);
             }
         });

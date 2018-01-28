@@ -30,7 +30,12 @@
         <activity android:name=".SplashGifActivity" />
         <activity android:name=".shareOnFBActivity"></activity>
 
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
         <provider android:authorities="com.facebook.app.FacebookContentProvider143589382996969"
             android:name="com.facebook.FacebookContentProvider"

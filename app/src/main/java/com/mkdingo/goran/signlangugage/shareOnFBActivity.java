@@ -155,20 +155,20 @@ public class shareOnFBActivity extends AppCompatActivity {
 
     public void ShareFacebook(){
 
-//        if (ShareDialog.canShow(ShareLinkContent.class)) {
-//            linkContent = new ShareLinkContent.Builder()
-//                    .setContentUrl(Uri.parse(String.valueOf(slikaFB)))
-//                    .build();
-//           shareDialog.show(linkContent);
-//        }
+        if (ShareDialog.canShow(ShareLinkContent.class)) {
+            linkContent = new ShareLinkContent.Builder()
+                    .setContentUrl(Uri.parse(String.valueOf("www.google.com")))
+                    .build();
+           shareDialog.show(linkContent);
+        }
 
-        SharePhoto photo = new SharePhoto.Builder()
-                .setBitmap(slikaFB)
-                .build();
-        SharePhotoContent content = new SharePhotoContent.Builder()
-                .addPhoto(photo)
-                .build();
-        shareDialog.show(content);
+//        SharePhoto photo = new SharePhoto.Builder()
+//                .setBitmap(slikaFB);
+//        final SharePhoto sharePhoto = photoBuilder.build();
+//        SharePhotoContent content = new SharePhotoContent.Builder()
+//                .addPhoto(photo)
+//                .build();
+//        shareDialog.show(content);
     }
         @Override
         protected void onActivityResult ( final int requestCode, final int resultCode,

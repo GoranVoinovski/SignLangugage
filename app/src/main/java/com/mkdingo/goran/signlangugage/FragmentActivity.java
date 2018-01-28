@@ -15,9 +15,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mkdingo.goran.signlangugage.adapter.VPagerAdapter;
+import com.mkdingo.goran.signlangugage.adapter.VPagerAdapterAzbuka;
+import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
+import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -28,6 +32,7 @@ public class FragmentActivity extends AppCompatActivity {
 
     @BindView(R.id.vPager)ViewPager viewPager;
     VPagerAdapter adapter;
+    VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
     @BindView(R.id.prevbtn)
@@ -40,6 +45,7 @@ public class FragmentActivity extends AppCompatActivity {
     TextView textView;
     int i = 0;
     int pozicijaGif = 0;
+    StaticniSliki slikiAzbuka;
     ArrayList<TextView>myTextViews;
     LinearLayout.LayoutParams params;
 
@@ -54,98 +60,110 @@ public class FragmentActivity extends AppCompatActivity {
         user = SharedPreferences.getUser(this);
 
         Intent intent = getIntent();
-        zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
-        int pozicijaGif = intent.getIntExtra("POSITION",0);
-        if (intent.hasExtra("FLAG")){
-            Intent intent1 = new Intent(this,SplashGifActivity.class);
-            intent1.putExtra("EXTRA",zborovi);
-            intent1.putExtra("POSITION", pozicijaGif);
-            startActivity(intent1);
-            finish();
-        }
-
-
-        adapter = new VPagerAdapter(this.getSupportFragmentManager());
-
-        viewPager.setCurrentItem(pozicijaBukva);
-
-        if (zborovi.bukvi != null) {
-            if (zborovi.bukvi.size()>1){
-                myTextViews = new ArrayList<>();
-                tekstodzbor.setVisibility(View.INVISIBLE);
-                for (Character c : zborovi.bukvi) {
-
-                    params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    textView = new TextView (this);
-                    textView.setPadding(2,5,2,5);
-                    textView.setLayoutParams(params);
-                    textView.setText(c + "");
-                    textView.setId(i);
-                    bukviLayout.addView(textView);
-                    myTextViews.add(textView);
-                    i++;
-                }
-            }else {
-                nextbutton.setVisibility(View.INVISIBLE);
-                previousbtn.setVisibility(View.INVISIBLE);
-                tekstodzbor.setText(zborovi.text);
+        if (intent.hasExtra("EXTRA")){
+            zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
+            int pozicijaGif = intent.getIntExtra("POSITION",0);
+            if (intent.hasExtra("FLAG")){
+                Intent intent1 = new Intent(this,SplashGifActivity.class);
+                intent1.putExtra("EXTRA",zborovi);
+                intent1.putExtra("POSITION", pozicijaGif);
+                startActivity(intent1);
+                finish();
             }
-        } else {
-        }
-
-        if (zborovi.bukvi.size() > 1){
-            for (int i = 0; i < myTextViews.size(); i++) {
-                if (i == pozicijaBukva){
-                    myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                    myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
-                    myTextViews.get(i).setTextSize(50);
-
-                }else {
-                    myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
-                    myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
-                    myTextViews.get(i).setTextSize(30);
-
-                }
-            }
-        }
 
 
+            adapter = new VPagerAdapter(this.getSupportFragmentManager());
 
-        adapter.addSliki(zborovi.contents);
-        viewPager.setAdapter(adapter);
-        viewPager.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-
-        nextbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            pozicijaBukva++;
             viewPager.setCurrentItem(pozicijaBukva);
-                for (int i = 0; i < myTextViews.size(); i++) {
 
+            if (zborovi.bukvi != null) {
+                if (zborovi.bukvi.size()>1){
+                    myTextViews = new ArrayList<>();
+                    tekstodzbor.setVisibility(View.INVISIBLE);
+                    for (Character c : zborovi.bukvi) {
+
+                        params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                        textView = new TextView (this);
+                        textView.setPadding(2,5,2,5);
+                        textView.setLayoutParams(params);
+                        textView.setText(c + "");
+                        textView.setId(i);
+                        bukviLayout.addView(textView);
+                        myTextViews.add(textView);
+                        i++;
+                    }
+                }else {
+                    nextbutton.setVisibility(View.INVISIBLE);
+                    previousbtn.setVisibility(View.INVISIBLE);
+                    tekstodzbor.setText(zborovi.text);
+                }
+            } else {
+            }
+
+            if (zborovi.bukvi.size() > 1){
+                for (int i = 0; i < myTextViews.size(); i++) {
                     if (i == pozicijaBukva){
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
                         myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
                         myTextViews.get(i).setTextSize(50);
+
                     }else {
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
                         myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
                         myTextViews.get(i).setTextSize(30);
+
                     }
                 }
-
-                if (pozicijaBukva == myTextViews.size()){
-                    Intent intent1 = new Intent(FragmentActivity.this,shareOnFBActivity.class);
-                    intent1.putExtra("User", user);
-                    startActivity(intent1);
-                    finish();
-                }
             }
-        });
+
+
+
+            adapter.addSliki(zborovi.contents);
+            viewPager.setAdapter(adapter);
+            viewPager.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    return true;
+                }
+            });
+
+            nextbutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    pozicijaBukva++;
+                    viewPager.setCurrentItem(pozicijaBukva);
+                    for (int i = 0; i < myTextViews.size(); i++) {
+
+                        if (i == pozicijaBukva){
+                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
+                            myTextViews.get(i).setTextSize(50);
+                        }else {
+                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
+                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                            myTextViews.get(i).setTextSize(30);
+                        }
+                    }
+
+                    if (pozicijaBukva == myTextViews.size()){
+                        Intent intent1 = new Intent(FragmentActivity.this,shareOnFBActivity.class);
+                        intent1.putExtra("User", user);
+                        startActivity(intent1);
+                        finish();
+                    }
+                }
+            });
+
+        }else {
+           SlikiAzbuka azbuka = SharedPreferences.getAzbuka(this);
+           slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
+           int pozicijaBukva = intent.getIntExtra("POSITION2",0);
+            viewPager.setCurrentItem(pozicijaBukva);
+           adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
+           adapterAzbuka.addSliki(azbuka.slikiBukvi);
+           viewPager.setAdapter(adapterAzbuka);
+        }
+
     }
 
     @Override
