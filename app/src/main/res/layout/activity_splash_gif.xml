@@ -16,7 +16,7 @@
             android:id="@+id/text_learn_to_sign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Научете го Знаковниот јазик"
+            android:text="Научете го Знаковниот  јазик"
             android:textAlignment="center"/>
         <TextView
             android:textAlignment="center"
