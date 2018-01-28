@@ -155,6 +155,26 @@ public class FragmentActivity extends AppCompatActivity {
                 }
             });
 
+            previousbtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    pozicijaBukva--;
+                    viewPager.setCurrentItem(pozicijaBukva);
+                    for (int i = 0; i < myTextViews.size(); i--) {
+
+                        if (i == pozicijaBukva){
+                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
+                            myTextViews.get(i).setTextSize(50);
+                        }else {
+                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
+                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                            myTextViews.get(i).setTextSize(30);
+                        }
+                    }
+                }
+            });
+
         }else {
            adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
            slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
