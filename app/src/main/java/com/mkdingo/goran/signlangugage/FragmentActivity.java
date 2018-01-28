@@ -30,7 +30,7 @@ import butterknife.ButterKnife;
 
 public class FragmentActivity extends AppCompatActivity {
 
-    @BindView(R.id.vPager)ViewPager viewPager;
+    public @BindView(R.id.vPager)ViewPager viewPager;
     VPagerAdapter adapter;
     VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
@@ -46,6 +46,7 @@ public class FragmentActivity extends AppCompatActivity {
     int i = 0;
     int pozicijaGif = 0;
     StaticniSliki slikiAzbuka;
+    SlikiAzbuka slikilista;
     ArrayList<TextView>myTextViews;
     LinearLayout.LayoutParams params;
 
@@ -58,7 +59,7 @@ public class FragmentActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         user = SharedPreferences.getUser(this);
-
+        slikilista = SharedPreferences.getAzbuka(this);
         Intent intent = getIntent();
         if (intent.hasExtra("EXTRA")){
             zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
@@ -155,13 +156,13 @@ public class FragmentActivity extends AppCompatActivity {
             });
 
         }else {
-           SlikiAzbuka azbuka = SharedPreferences.getAzbuka(this);
+           adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
            slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
            int pozicijaBukva = intent.getIntExtra("POSITION2",0);
-            viewPager.setCurrentItem(pozicijaBukva);
-           adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
-           adapterAzbuka.addSliki(azbuka.slikiBukvi);
+           slikiAzbuka = slikilista.slikiBukvi.get(pozicijaBukva);
+           adapterAzbuka.addSliki(slikilista.slikiBukvi);
            viewPager.setAdapter(adapterAzbuka);
+           viewPager.setCurrentItem(pozicijaBukva);
         }
 
     }

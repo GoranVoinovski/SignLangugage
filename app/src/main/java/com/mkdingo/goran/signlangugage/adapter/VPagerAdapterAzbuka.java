@@ -16,7 +16,8 @@ import java.util.ArrayList;
  */
 
 public class VPagerAdapterAzbuka extends FragmentPagerAdapter{
-    SlikiAzbuka azbuka = new SlikiAzbuka();
+   SlikiAzbuka azbuka = new SlikiAzbuka();
+
 
     public void addSliki(ArrayList<StaticniSliki> content){azbuka.slikiBukvi = content;}
 
@@ -28,7 +29,7 @@ public class VPagerAdapterAzbuka extends FragmentPagerAdapter{
     @Override
     public Fragment getItem(int position) {
         Bundle args = new Bundle();
-        args.putSerializable("Slika", azbuka.slikiBukvi.get(position).Slika);
+        args.putSerializable("Slika", azbuka.slikiBukvi.get(position));
         args.putSerializable("Bukva", azbuka.slikiBukvi.get(position).bukva);
         args.putInt("pozicija",position);
         FragmentAzbuka fragment = new FragmentAzbuka();
