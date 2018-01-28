@@ -9,6 +9,7 @@ import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
@@ -37,6 +38,7 @@ public class Najava extends AppCompatActivity {
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
 
+
     }
 
 
@@ -48,7 +50,8 @@ public class Najava extends AppCompatActivity {
         SharedPreferences.addUser(user,Najava.this);
         Intent intent = new Intent(Najava.this, Home.class);
         startActivity(intent);
-
+        Toast.makeText(this, "Успешно се регистриравте", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 
@@ -56,12 +59,12 @@ public class Najava extends AppCompatActivity {
         user.zborovi = new ArrayList<>();
         Zborovi zbor1 = new Zborovi();
         zbor1.contents = PovleciSlikiZaZbor(PopolniLista(user.name),slikiAzbuka());
-        zbor1.text = "I am " + user.name;
+        zbor1.text = "Јас сум " + user.name;
         zbor1.bukvi = PopolniLista(user.name);
 
         Zborovi zbor2 = new Zborovi();
         zbor2.contents = new ArrayList<>();
-        zbor2.text = "Thank you";
+        zbor2.text = "Благодарам";
         zbor2.bukvi = PopolniLista("");
         Sliki slikaZbor2 = new Sliki();
         slikaZbor2.slika = R.raw.thankyoublue;
@@ -70,7 +73,7 @@ public class Najava extends AppCompatActivity {
 
         Zborovi zbor3 = new Zborovi();
         zbor3.contents = new ArrayList<>();
-        zbor3.text = "Turn left";
+        zbor3.text = "Заврти лево";
         zbor3.bukvi = PopolniLista("");
         Sliki slikaZbor3 = new Sliki();
         slikaZbor3.tag = "gif";
@@ -79,7 +82,7 @@ public class Najava extends AppCompatActivity {
 
         Zborovi zbor4 = new Zborovi();
         zbor4.contents = new ArrayList<>();
-        zbor4.text = "Turn right";
+        zbor4.text = "Заврти десно";
         zbor4.bukvi = PopolniLista("");
         Sliki slikaZbor4 = new Sliki();
         slikaZbor4.tag = "gif";

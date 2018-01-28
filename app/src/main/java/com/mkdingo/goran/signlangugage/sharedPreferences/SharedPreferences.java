@@ -29,4 +29,10 @@ public class SharedPreferences {
 
         return new Gson().fromJson(getPreferences(c).getString("User", ""), User.class);
     }
+
+    public static void removeFavorites(Context c){
+
+        getPreferences(c).edit().remove("User").apply();
+
+    }
 }

@@ -7,11 +7,11 @@
         <item
             android:id="@+id/learn_to_sign"
 
-            android:title="Learn to Sign" />
+            android:title="Научи знаци" />
         <item
-            android:id="@+id/about"
+            android:id="@+id/azbuka"
 
-            android:title="About us" />
+            android:title="Азбука и знаци" />
         <!--<item-->
             <!--android:id="@+id/nav_slideshow"-->
             <!--android:icon="@drawable/ic_menu_slideshow"-->
@@ -21,6 +21,13 @@
             <!--android:icon="@drawable/ic_menu_manage"-->
             <!--android:title="Tools" />-->
     </group>
+
+
+    <item
+        android:id="@+id/about"
+
+        android:title="За нас" />
+
 
     <!--<item android:title="Communicate">-->
         <!--<menu>-->
