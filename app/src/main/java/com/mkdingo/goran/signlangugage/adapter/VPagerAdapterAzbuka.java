@@ -5,11 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.mkdingo.goran.signlangugage.fragment.FragmentSlika;
-import com.mkdingo.goran.signlangugage.klasi.Sliki;
+import com.mkdingo.goran.signlangugage.fragment.FragmentAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
-import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 
 import java.util.ArrayList;
 
@@ -33,7 +31,7 @@ public class VPagerAdapterAzbuka extends FragmentPagerAdapter{
         args.putSerializable("Slika", azbuka.slikiBukvi.get(position).Slika);
         args.putSerializable("Bukva", azbuka.slikiBukvi.get(position).bukva);
         args.putInt("pozicija",position);
-        FragmentSlika fragment = new FragmentSlika();
+        FragmentAzbuka fragment = new FragmentAzbuka();
         fragment.setArguments(args);
         return fragment;
     }

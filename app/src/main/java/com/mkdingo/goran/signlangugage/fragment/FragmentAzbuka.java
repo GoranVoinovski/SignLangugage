@@ -31,8 +31,7 @@ public class FragmentAzbuka extends Fragment {
     @BindView(R.id.img1)
     ImageView pic1;
     private Unbinder mUnbind;
-    SlikiAzbuka zborovi = new SlikiAzbuka();
-    StaticniSliki slika;
+    StaticniSliki sliki = new StaticniSliki();
 
 
     @Nullable
@@ -41,10 +40,11 @@ public class FragmentAzbuka extends Fragment {
         View view = inflater.inflate(R.layout.fragment_azbuka, null);
         mUnbind = ButterKnife.bind(this, view);
 
-        slika.Slika = (Sliki)getArguments().getSerializable("Slika");
-        slika.bukva = getArguments().getChar("Bukva");
+        sliki.Slika.slika = getArguments().getInt("Slika");
+        sliki.bukva = getArguments().getChar("Bukva");
 
-
+        bukvaPrikaz.setText(sliki.bukva + "");
+        Picasso.with(getActivity()).load(sliki.Slika.slika).centerInside().fit().into(pic1);
 
         return view;
     }

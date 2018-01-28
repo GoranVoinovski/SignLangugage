@@ -50,7 +50,6 @@ public class FragmentSlika extends Fragment {
         });
 
        if (zborovi.tag.equals("gif")){
-//           Glide.with(getActivity()).load(zborovi.slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(pic);
            String path = "android.resource://" + getActivity().getPackageName() + "/" + zborovi.slika;
            pic.setVideoPath(path);
            pic.start();
