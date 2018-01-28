@@ -16,7 +16,7 @@
             android:id="@+id/text_learn_to_sign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Learn to sign"
+            android:text="Научете го Знаковниот јазик"
             android:textAlignment="center"/>
         <TextView
             android:textAlignment="center"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
-            android:text="Change your name"
+            android:text="Променете го Вашето име"
             android:textAlignment="center"
             />
 
@@ -39,7 +39,7 @@
             android:id="@+id/button_continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="continue"/>
+            android:text="ПРОДОЛЖЕТЕ ПОНАТАКА"/>
 
 
 
@@ -61,16 +61,15 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
-    <ImageButton
+    <Button
         android:id="@+id/next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="2dp"
-        android:layout_width="60dp"
+        android:layout_width="70dp"
         android:layout_height="60dp"
-        android:background="@drawable/roundshape"
-        android:src="@mipmap/arrow_right"
+        android:background="@drawable/strelka_denso"
+        android:text="next"
+        android:visibility="invisible"
         android:textColor="@color/White"/>
 
 

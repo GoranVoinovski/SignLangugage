@@ -163,8 +163,8 @@ public class shareOnFBActivity extends AppCompatActivity {
         }
 
 //        SharePhoto photo = new SharePhoto.Builder()
-//                .setBitmap(slikaFB);
-//        final SharePhoto sharePhoto = photoBuilder.build();
+//                .setBitmap(slikaFB)
+//       .build();
 //        SharePhotoContent content = new SharePhotoContent.Builder()
 //                .addPhoto(photo)
 //                .build();
