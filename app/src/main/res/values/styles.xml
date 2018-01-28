@@ -5,11 +5,11 @@
 
 
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/LightSteelBlue</item>
+        <item name="colorPrimary">@color/CornflowerBlue</item>
         <item name="colorPrimaryDark">@color/plava1</item>
         <item name="colorAccent">@color/Teal</item>
-        <item name="android:colorBackground">@color/AliceBlue</item>
-        <item name="android:itemBackground">@color/LightSteelBlue</item>
+        <item name="android:colorBackground">@color/CornflowerBlue</item>
+        <item name="android:itemBackground">@color/plava1</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

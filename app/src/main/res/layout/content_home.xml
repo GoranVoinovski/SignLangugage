@@ -11,16 +11,16 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"
-        android:background="@color/LightSteelBlue"
+        android:background="@drawable/forma4"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <android.support.design.widget.TabLayout
             app:tabTextColor="@color/White"
             app:tabSelectedTextColor="@color/Black"
-            app:tabIndicatorColor="@color/Black"
+            app:tabIndicatorColor="@color/Beige"
             android:id="@+id/tablayout"
-            android:background="@color/LightSteelBlue"
+            android:background="@color/plava1"
             android:layout_width="match_parent"
             android:layout_height="30dp"/>
 

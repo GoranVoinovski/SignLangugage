@@ -162,7 +162,9 @@
     <color name="black_overlay">#66000000</color>
 
     <color name="plava1">#10809e</color>
+
     <color name="plava2">#0d6d87</color>
+    <color name="plava3">#168dad</color>
     <color name="plavaSvetla">#1190b2</color>
     <color name="plavaSvetla2">#1495b7</color>
     <color name="plavaSvetla3">#6a9bf2</color>
