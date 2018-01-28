@@ -63,7 +63,7 @@ public class FragmentActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent.hasExtra("EXTRA")){
             zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
-            int pozicijaGif = intent.getIntExtra("POSITION",0);
+            final int pozicijaGif = intent.getIntExtra("POSITION",0);
             if (intent.hasExtra("FLAG")){
                 Intent intent1 = new Intent(this,SplashGifActivity.class);
                 intent1.putExtra("EXTRA",zborovi);
@@ -128,6 +128,7 @@ public class FragmentActivity extends AppCompatActivity {
                 }
             });
 
+
             nextbutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -158,7 +159,13 @@ public class FragmentActivity extends AppCompatActivity {
             previousbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    pozicijaBukva--;
+
+                    if (pozicijaBukva > 0){
+                        pozicijaBukva--;
+                    }else if (pozicijaBukva < 0){
+                        pozicijaBukva = 0;
+                }
+
                     viewPager.setCurrentItem(pozicijaBukva);
                     for (int i = 0; i < myTextViews.size(); i--) {
 
@@ -171,7 +178,7 @@ public class FragmentActivity extends AppCompatActivity {
                             myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
                             myTextViews.get(i).setTextSize(30);
                         }
-                    }
+                   }
                 }
             });
 
