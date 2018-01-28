@@ -61,14 +61,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_width="70dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/strelka_denso"
-        android:text="next"
+        android:background="@drawable/roundshape"
+        android:src="@mipmap/arrow_right"
         android:textColor="@color/White"/>
 
 
