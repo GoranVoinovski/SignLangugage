@@ -50,7 +50,7 @@ public class SplashGifActivity extends AppCompatActivity {
                 relativeLayout.setVisibility(View.VISIBLE);
                 user = new User();
                 user = SharedPreferences.getUser(context);
-                imageView.setText("I am "+ user.name);
+                imageView.setText("ЈАС СУМ "+ user.name);
                 change_name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -65,7 +65,7 @@ public class SplashGifActivity extends AppCompatActivity {
                         prodolzi.setVisibility(View.VISIBLE);
                         int Slika = R.raw.iam;
                         Glide.with(SplashGifActivity.this).load(Slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(gif);
-                        tekst.setText("I AM");
+                        tekst.setText("ЈАС СУМ");
                     }
                 });
 

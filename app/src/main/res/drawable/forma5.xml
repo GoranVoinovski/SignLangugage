@@ -5,10 +5,14 @@
         android:radius="14dp"
         />
     <gradient
-        android:centerX="35%"
+        android:centerX="90%"
         android:type="linear"
         android:angle="270"
-        android:startColor="@color/trans2"
+
+        android:startColor="@color/plavaSvetla"
+        android:centerColor="@color/plavaSvetla3"
+        android:endColor="@color/plavaSvetla4"
+
         />
     <padding
         android:left="0dp"

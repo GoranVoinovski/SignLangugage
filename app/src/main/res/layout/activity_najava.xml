@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/forma7"
+    android:background="@drawable/forma4"
     tools:context="com.mkdingo.goran.signlangugage.Najava">
 
 
@@ -17,7 +17,7 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/latin2"
         android:text="@string/what_is_your_name"
-        android:textColor="@color/Black"
+        android:textColor="@color/Beige"
         android:textSize="20sp" />
 
     <EditText
@@ -38,16 +38,17 @@
 
     <Button
         android:id="@+id/save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/forma6"
+        android:background="@drawable/kopce3"
         android:fontFamily="@font/latin"
         android:text="@string/save"
-        android:textColor="@color/DarkSlateGray" />
+        android:textColor="@color/plava1" />
 
 
 </RelativeLayout>
