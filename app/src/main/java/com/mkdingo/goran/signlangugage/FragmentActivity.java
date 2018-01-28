@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -35,9 +36,9 @@ public class FragmentActivity extends AppCompatActivity {
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
     @BindView(R.id.prevbtn)
-    Button previousbtn;
+    ImageButton previousbtn;
     @BindView(R.id.nextbtn)
-    Button nextbutton;
+    ImageButton nextbutton;
     @BindView(R.id.llBukvi)
     LinearLayout bukviLayout;
     public int pozicijaBukva = 0;
