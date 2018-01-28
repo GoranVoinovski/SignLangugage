@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
+import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
@@ -29,7 +30,7 @@ public class Najava extends AppCompatActivity {
     @BindView(R.id.save)Button saveUser;
     @BindView(R.id.textView)TextView textView;
     User user;
-    StaticniSliki sliki;
+    SlikiAzbuka sliki = new SlikiAzbuka();
 
 
     @Override
@@ -38,6 +39,8 @@ public class Najava extends AppCompatActivity {
         setContentView(R.layout.activity_najava);
         ButterKnife.bind(this);
 
+        sliki.slikiBukvi = slikiAzbuka();
+        SharedPreferences.addAzbuka(sliki,this);
 
     }
 
@@ -142,6 +145,7 @@ public class Najava extends AppCompatActivity {
         slika_d.tag = "jpg";
         StaticniSliki slikaD = new StaticniSliki(slika_d,'D');
         slikiArrayList.add(slikaD);
+
 
 
         return slikiArrayList;

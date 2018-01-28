@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.google.gson.Gson;
+import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
+import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 
 /**
@@ -34,5 +36,19 @@ public class SharedPreferences {
 
         getPreferences(c).edit().remove("User").apply();
 
+    }
+
+    public static void addAzbuka(SlikiAzbuka sliki, Context c){
+
+        Gson gson = new Gson();
+        String mapString = gson.toJson(sliki);
+        getPreferences(c).edit().putString("ABC", mapString).apply();
+
+
+    }
+
+    public static SlikiAzbuka getAzbuka(Context c){
+
+        return new Gson().fromJson(getPreferences(c).getString("ABC", ""), SlikiAzbuka.class);
     }
 }

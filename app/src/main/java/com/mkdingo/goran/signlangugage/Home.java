@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,7 +20,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.mkdingo.goran.signlangugage.adapter.HomePagerAdapter;
 import com.mkdingo.goran.signlangugage.adapter.RecyclerViewAdapter;
+import com.mkdingo.goran.signlangugage.adapter.VPagerAdapter;
+import com.mkdingo.goran.signlangugage.fragment.Azbuka;
+import com.mkdingo.goran.signlangugage.fragment.LearnToSign;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.listener.OnRowClickListener;
@@ -30,8 +36,9 @@ import butterknife.ButterKnife;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    @BindView(R.id.MyRV)RecyclerView rv;
-    RecyclerViewAdapter adapter;
+
+    @BindView(R.id.vp)ViewPager vPage;
+    @BindView(R.id.tablayout)TabLayout tabs;
     public User user;
 
 
@@ -49,41 +56,10 @@ public class Home extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        adapter = new RecyclerViewAdapter(this, new OnRowClickListener() {
-            @Override
-            public void onRowClick(Zborovi model, int position) {
-                if (model.bukvi.size()>1){
-                    Intent intent1 = new Intent(Home.this, FragmentActivity.class);
-                    intent1.putExtra("EXTRA",model);
-                    intent1.putExtra("POSITION", position);
-                    intent1.putExtra("FLAG", "FLAG");
-                    startActivity(intent1);
-
-
-                }else {
-
-                    Intent intent = new Intent(Home.this, FragmentActivity.class);
-                    intent.putExtra("EXTRA",model);
-                    intent.putExtra("POSITION", position);
-                    startActivity(intent);}
-            }
-        });
-
-
-
-
-        adapter.setItems(user.zborovi);
-
-        rv.setHasFixedSize(true);
-        rv.setLayoutManager(new LinearLayoutManager(this));
-        rv.setAdapter(adapter);
+        setUpViewPager(vPage);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
-
     }
 
 
@@ -132,7 +108,9 @@ public class Home extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.learn_to_sign) {
-            // Handle the camera action
+           vPage.setCurrentItem(0);
+        }else if (id == R.id.azbuka) {
+            vPage.setCurrentItem(1);
         } else if (id == R.id.about) {
 
         }
@@ -150,5 +128,14 @@ public class Home extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    private void setUpViewPager(ViewPager mojpager) {
+
+        HomePagerAdapter adapter = new HomePagerAdapter(this.getSupportFragmentManager());
+        adapter.dodadiFragment(new LearnToSign(),"Говори со знаци");
+        adapter.dodadiFragment(new Azbuka(),"Азбука");
+        mojpager.setAdapter(adapter);
     }
 }
