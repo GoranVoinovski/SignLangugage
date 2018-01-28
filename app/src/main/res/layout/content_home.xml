@@ -19,7 +19,7 @@
             app:tabSelectedTextColor="@color/colorAccent"
             app:tabIndicatorColor="@color/colorAccent"
             android:id="@+id/tablayout"
-            android:background="@color/LightSalmon"
+            android:background="@color/plavaSvetla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

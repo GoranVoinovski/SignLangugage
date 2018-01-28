@@ -6,11 +6,11 @@
         android:radius="0dp"
         />
     <gradient
-        android:endColor="@color/Beige"
+        android:endColor="@color/PeachPuff"
         android:centerX="0%"
         android:type="linear"
         android:angle="270"
-        android:startColor="@color/LightSalmon"
+        android:startColor="@color/plava1"
         />
     <padding
         android:left="0dp"

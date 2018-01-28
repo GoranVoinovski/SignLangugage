@@ -156,10 +156,24 @@
     <color name="crnaPoluTranstarentodbrana">#bc000000</color>
     <color name="trans">#bc8D6E63</color>
     <color name="trans2">#00000000</color>
-    <color name="potemna2">#f79b76</color>
+
     <color name="potemna3">#e08059</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="plava1">#10809e</color>
+    <color name="plava2">#0d6d87</color>
+    <color name="plavaSvetla">#1190b2</color>
+    <color name="plavaSvetla2">#1495b7</color>
+    <color name="plavaSvetla3">#6a9bf2</color>
+    <color name="plavaSvetla4">#F574A3F7</color>
+
+
+
+    <color name="svetlaOrange">#ffccb7</color>
+
+
+
 
 
 </resources>

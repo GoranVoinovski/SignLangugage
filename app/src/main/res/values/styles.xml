@@ -3,15 +3,17 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/LightSalmon</item>
-        <item name="colorPrimaryDark">@color/potemna2</item>
+        <item name="colorPrimary">@color/plava1</item>
+        <item name="colorPrimaryDark">@color/plava2</item>
         <item name="colorAccent">@color/Teal</item>
         <item name="android:colorBackground">@color/AliceBlue</item>
+        <item name="android:itemBackground">@color/plava2</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -28,6 +30,7 @@
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
+
     </style>
 
 </resources>
