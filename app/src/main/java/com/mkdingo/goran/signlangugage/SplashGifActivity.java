@@ -62,6 +62,7 @@ public class SplashGifActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         relativeLayout.setVisibility(View.INVISIBLE);
+                        prodolzi.setVisibility(View.VISIBLE);
                         int Slika = R.raw.iam;
                         Glide.with(SplashGifActivity.this).load(Slika).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).crossFade().into(gif);
                         tekst.setText("I AM");

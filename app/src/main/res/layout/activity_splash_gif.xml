@@ -69,6 +69,7 @@
         android:layout_height="60dp"
         android:background="@drawable/strelka_denso"
         android:text="next"
+        android:visibility="invisible"
         android:textColor="@color/White"/>
 
 
