@@ -11,7 +11,7 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"
-        android:background="@drawable/forma4"
+        android:background="@color/trans2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -20,7 +20,7 @@
             app:tabSelectedTextColor="@color/Black"
             app:tabIndicatorColor="@color/Beige"
             android:id="@+id/tablayout"
-            android:background="@color/plava1"
+            android:background="@drawable/forma5"
             android:layout_width="match_parent"
             android:layout_height="30dp"/>
 

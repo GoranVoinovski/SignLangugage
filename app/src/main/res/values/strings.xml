@@ -2,7 +2,7 @@
     <string name="app_name">SignLangugage</string>
     <string name="enter_your_name">Внеси име</string>
     <string name="save">Регистрирај се</string>
-    <string name="what_is_your_name" formatted="true">Кое е твоето име?</string>
+    <string name="what_is_your_name"  formatted="true"> Кое е твоето име? </string>
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

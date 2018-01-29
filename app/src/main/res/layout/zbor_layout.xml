@@ -4,18 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="3dp"
-android:layout_marginTop="15dp"
-    android:orientation="vertical"
 
-    cardview:cardCornerRadius="14dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    cardview:cardCornerRadius="40dp"
     cardview:cardElevation="0dp">
 
     <RelativeLayout
         android:id="@+id/layout3"
-
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/forma5">
+        android:background="@drawable/forma6">
 
 
         <TextView
@@ -26,8 +26,9 @@ android:layout_marginTop="15dp"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:text="TEKST"
+            android:fontFamily="@font/macswiss"
             android:textColor="@color/Black"
-            android:textSize="24sp"
+            android:textSize="23sp"
 
             />
 

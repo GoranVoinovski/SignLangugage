@@ -170,12 +170,17 @@
     <color name="plavaSvetla3">#6a9bf2</color>
     <color name="plavaSvetla4">#F574A3F7</color>
 
+    <color name="plava4">#c7cae0</color>
 
+    <color name="plava6">#c7cce1</color>
+
+
+    <color name="plava5">#3F51B5</color>
+    <color name="siva">#BDBDBD</color>
 
     <color name="svetlaOrange">#ffccb7</color>
-
-
-
+    <color name="utepana">#FFF9F9EC</color>
+    <color name="utepana2">#f0f0ec</color>
 
 
 </resources>

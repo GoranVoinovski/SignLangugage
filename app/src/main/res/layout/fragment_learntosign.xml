@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/forma7"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/MyRV"
         android:scrollbars="vertical"
+        android:background="@drawable/forma7"
         android:scrollbarSize="3dp"
         android:scrollbarStyle="outsideOverlay"
         android:layout_width="match_parent"

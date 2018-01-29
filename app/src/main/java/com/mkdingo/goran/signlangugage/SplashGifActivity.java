@@ -2,6 +2,7 @@ package com.mkdingo.goran.signlangugage;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,6 +43,8 @@ public class SplashGifActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         context = this;
 
+        change_name.setPaintFlags(change_name.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG   );
+
             Intent intent = getIntent();
             if (intent.hasExtra("POSITION")){
                 zbor = (Zborovi) intent.getSerializableExtra("EXTRA");
@@ -50,7 +53,7 @@ public class SplashGifActivity extends AppCompatActivity {
                 relativeLayout.setVisibility(View.VISIBLE);
                 user = new User();
                 user = SharedPreferences.getUser(context);
-                imageView.setText("ЈАС СУМ "+ user.name);
+                imageView.setText("ЗДРАВО, ЈАС СУМ " + "\n" + user.name);
                 change_name.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

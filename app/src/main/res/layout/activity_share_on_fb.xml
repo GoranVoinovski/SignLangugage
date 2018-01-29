@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/forma2"
     tools:context="com.mkdingo.goran.signlangugage.shareOnFBActivity">
 
     <FrameLayout
-        android:background="@color/LightSalmon"
+        android:background="@drawable/forma2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -37,15 +38,14 @@
 
 
 
-
-
     <TextView
         android:id="@+id/share_on_fb"
         android:text="SHARE ON"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:gravity="center"
-        android:layout_marginTop="450dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="40dp"/>
 
     <ImageButton
@@ -54,16 +54,17 @@
         android:layout_height="40dp"
         android:background="@drawable/facebook_icon"
         android:layout_toRightOf="@id/share_on_fb"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="450dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"/>
     <TextView
         android:id="@+id/share_on_tw"
         android:text="SHARE ON"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:gravity="center"
-        android:layout_marginTop="450dp"
-        android:layout_marginLeft="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="50dp"
         android:layout_toRightOf="@id/facebook"/>
 
     <ImageButton
@@ -72,8 +73,9 @@
         android:layout_height="40dp"
         android:background="@drawable/twitter_icon"
         android:layout_toRightOf="@id/share_on_tw"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="450dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"/>
 
 
 

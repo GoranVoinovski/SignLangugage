@@ -14,27 +14,37 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="2dp"
-        android:layout_marginTop="100dp"
-        android:fontFamily="@font/latin2"
+        android:layout_marginTop="130dp"
+       android:fontFamily="@font/macswiss"
         android:text="@string/what_is_your_name"
         android:textColor="@color/Beige"
-        android:textSize="20sp" />
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/edtname"
-        android:layout_width="270dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
         android:inputType="textCapCharacters"
         android:digits="АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ"
         android:maxLength="15"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/forma1"
-        android:fontFamily="@font/latin3"
+        android:fontFamily="@font/macbahamas"
         android:gravity="center"
         android:hint="@string/enter_your_name"
-        android:textSize="25sp" />
+        android:textSize="23sp" />
+
+    <TextView
+        android:text="Користете тастатура со Македонска поддршка"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/edtname"
+        android:layout_marginLeft="50dp"
+        android:textSize="12sp"
+        android:textColor="@color/Bisque"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/save"
@@ -46,7 +56,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/kopce3"
-        android:fontFamily="@font/latin"
+        android:textSize="12sp"
+        android:fontFamily="@font/macswissbold"
         android:text="@string/save"
         android:textColor="@color/plava1" />
 
