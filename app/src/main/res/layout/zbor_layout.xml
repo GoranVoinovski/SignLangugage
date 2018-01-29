@@ -3,10 +3,7 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="3dp"
-
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
+    android:layout_margin="15dp"
     android:orientation="vertical"
     cardview:cardCornerRadius="40dp"
     cardview:cardElevation="0dp">
@@ -14,8 +11,8 @@
     <RelativeLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/forma6">
+        android:layout_height="60dp"
+        android:background="@drawable/forma1goran">
 
 
         <TextView
@@ -27,10 +24,8 @@
             android:layout_gravity="center"
             android:text="TEKST"
             android:fontFamily="@font/macswiss"
-            android:textColor="@color/Black"
-            android:textSize="23sp"
-
-            />
+            android:textColor="@color/White"
+            android:textSize="23sp" />
 
     </RelativeLayout>
 

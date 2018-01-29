@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#f48d53</color>
-    <color name="colorPrimaryDark">#f48d53</color>
-    <color name="colorAccent">#f48d53</color>
+    <color name="colorPrimary">#FE5454</color>
+    <color name="colorPrimaryDark">#FE5454</color>
+    <color name="colorAccent">#3B3B3B</color>
 
     <color name="color1">#f48d53</color>
     <color name="color2">#f45353</color>
@@ -181,6 +181,12 @@
     <color name="svetlaOrange">#ffccb7</color>
     <color name="utepana">#FFF9F9EC</color>
     <color name="utepana2">#f0f0ec</color>
+
+    <color name="PopsledenTemnaCrna">#3B3B3B</color>
+    <color name="PosledenCrvenkasta">#FE5454</color>
+    <color name="PosledenKafena">#615151</color>
+    <color name="PosledenSiva">#CCCCCC</color>
+    <color name="PosledenBela">#FFF9F9EC</color>
 
 
 </resources>
