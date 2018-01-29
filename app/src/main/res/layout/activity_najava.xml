@@ -48,18 +48,18 @@
 
     <Button
         android:id="@+id/save"
-        android:layout_width="180dp"
+        android:layout_width="170dp"
         android:layout_centerHorizontal="true"
-        android:layout_height="50dp"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/kopce3"
+        android:background="@drawable/forma2"
         android:textSize="12sp"
         android:fontFamily="@font/macswissbold"
         android:text="@string/save"
-        android:textColor="@color/plava1" />
+        android:textColor="@color/PopsledenTemnaCrna" />
 
 
 </RelativeLayout>

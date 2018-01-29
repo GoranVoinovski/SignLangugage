@@ -157,7 +157,7 @@
     <color name="trans">#bc8D6E63</color>
     <color name="trans2">#00000000</color>
 
-    <color name="potemna3">#e08059</color>
+    <color name="potemna3">#b46343</color>
 
     <color name="black_overlay">#66000000</color>
 
@@ -188,6 +188,8 @@
     <color name="PosledenKafena">#615151</color>
     <color name="PosledenSiva">#CCCCCC</color>
     <color name="PosledenBela">#FFF9F9EC</color>
+
+
 
 
 </resources>

@@ -9,9 +9,9 @@
         android:centerX="100%"
         android:type="linear"
         android:angle="270"
-        android:startColor="@color/plava1"
+        android:startColor="@color/PopsledenTemnaCrna"
 
-        android:centerColor="@color/CornflowerBlue"
+        android:centerColor="@color/PosledenCrvenkasta"
 
 
         />
