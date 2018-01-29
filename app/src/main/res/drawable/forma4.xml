@@ -6,12 +6,14 @@
         />
     <gradient
 
+        android:centerY="26%"
         android:centerX="100%"
         android:type="linear"
-        android:angle="270"
-        android:startColor="@color/PopsledenTemnaCrna"
+        android:angle="90"
+        android:startColor="@color/PosledenCrvenkasta2"
+        android:centerColor="@color/PopsledenTemnaCrna1"
 
-        android:centerColor="@color/PosledenCrvenkasta"
+        android:endColor="@color/PopsledenTemnaCrna"
 
 
         />

@@ -8,8 +8,8 @@
         android:centerX="0"
         android:type="linear"
         android:angle="0"
-        android:startColor="@color/Beige"
-        android:endColor="@color/Beige"
+        android:startColor="@color/utepana"
+        android:endColor="@color/utepana"
         />
     <padding
         android:left="0dp"
@@ -20,6 +20,6 @@
 
     <stroke
         android:width="1dp"
-        android:color="#FFFACD"
+        android:color="#FE5454"
         />
 </shape>
