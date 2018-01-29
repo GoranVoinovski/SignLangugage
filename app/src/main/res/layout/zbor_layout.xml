@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:text="TEKST"
             android:fontFamily="@font/macswiss"
-            android:textColor="@color/White"
+            android:textColor="@color/PosledenSiva"
             android:textSize="23sp" />
 
     </RelativeLayout>
