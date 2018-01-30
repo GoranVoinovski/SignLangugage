@@ -154,8 +154,9 @@
     <color name="BukvaTransparent">#00000000</color>
     <color name="crnaPoluTranstarent">#64000000</color>
     <color name="crnaPoluTranstarentodbrana">#bc000000</color>
-    <color name="trans">#bc8D6E63</color>
+    <color name="trans">#71baa79f</color>
     <color name="trans2">#00000000</color>
+    <color name="trans3">#79535252</color>
 
     <color name="potemna3">#b46343</color>
 
@@ -174,6 +175,9 @@
 
     <color name="plava6">#c7cce1</color>
 
+    <color name="tolbar">#E3D1BB</color>
+    <color name="tolbar2">#e5d3bb</color>
+    <color name="tab">#fce0d0bb</color>
 
     <color name="plava5">#3F51B5</color>
     <color name="siva">#BDBDBD</color>
@@ -184,8 +188,8 @@
 
     <color name="PopsledenTemnaCrna1">#3e3e3b</color>
     <color name="PopsledenTemnaCrna">#3B3B3B</color>
-    <color name="PosledenCrvenkasta">#FE5454</color>
-    <color name="PosledenCrvenkasta2">#c6f76f6f</color>
+    <color name="PosledenCrvenkasta">#aaec3939</color>
+    <color name="PosledenCrvenkasta2">#2ee57373</color>
     <color name="PosledenKafena">#615151</color>
     <color name="PosledenSiva">#CCCCCC</color>
     <color name="PosledenBela">#FFF9F9EC</color>

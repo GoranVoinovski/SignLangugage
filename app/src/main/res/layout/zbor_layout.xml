@@ -3,28 +3,32 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_margin="13dp"
     android:orientation="vertical"
-    cardview:cardCornerRadius="40dp"
+
+    cardview:cardBackgroundColor="@color/trans2"
+    cardview:cardCornerRadius="10dp"
     cardview:cardElevation="0dp">
 
     <RelativeLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/forma1goran">
+        android:layout_height="70dp"
+        android:background="@drawable/forma1">
 
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
+            android:background="@drawable/forma4"
             android:text="TEKST"
             android:fontFamily="@font/macswiss"
-            android:textColor="@color/PosledenSiva"
+            android:textColor="@color/Beige"
             android:textSize="23sp" />
 
     </RelativeLayout>
