@@ -8,23 +8,20 @@
     tools:context="com.mkdingo.goran.signlangugage.Home"
     tools:showIn="@layout/app_bar_home">
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/vp"
+        android:background="@color/trans2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
+        android:layout_height="match_parent">
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/tolbar"
-            app:tabIndicatorColor="@color/PosledenCrvenkasta"
+            app:tabTextColor="@color/White"
             app:tabSelectedTextColor="@color/Black"
-            app:tabTextColor="@color/RosyBrown"
-            app:theme="@style/CustomActionBar"/>
+            app:tabIndicatorColor="@color/PoslednaPlava"
+            android:id="@+id/tablayout"
+            android:background="@color/PoslednaPlava"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
 
 
     </android.support.v4.view.ViewPager>

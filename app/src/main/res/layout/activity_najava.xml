@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pozadina4"
+    android:background="@drawable/forma4"
     tools:context="com.mkdingo.goran.signlangugage.Najava">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="1dp"
-        android:layout_marginTop="220dp"
-       android:fontFamily="@font/macswiss"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/macswiss"
         android:text="@string/what_is_your_name"
         android:textColor="@color/Beige"
         android:textSize="25sp" />
@@ -29,21 +29,22 @@
         android:maxLength="15"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/forma6"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/forma1"
         android:fontFamily="@font/macbahamas"
         android:gravity="center"
         android:hint="@string/enter_your_name"
         android:textSize="23sp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtname"
-        android:layout_centerHorizontal="true"
         android:text="Користете тастатура со Македонска поддршка"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/edtname"
+        android:layout_marginLeft="50dp"
+        android:textSize="12sp"
         android:textColor="@color/Bisque"
-        android:textSize="12sp" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/save"
@@ -58,7 +59,7 @@
         android:textSize="12sp"
         android:fontFamily="@font/macswissbold"
         android:text="@string/save"
-        android:textColor="@color/Bisque" />
+        android:textColor="@color/PopsledenTemnaCrna" />
 
 
 </RelativeLayout>

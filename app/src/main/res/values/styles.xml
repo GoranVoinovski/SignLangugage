@@ -1,23 +1,17 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
 
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/svetlaOrange</item>
-        <item name="colorPrimaryDark">@color/plava1</item>
-        <item name="colorAccent">@color/Blue</item>
-        <item name="android:colorBackground">@color/plava5</item>
+        <item name="colorPrimary">@color/PopsledenTemnaCrna</item>
+        <item name="colorPrimaryDark">@color/PopsledenTemnaCrna</item>
+        <item name="colorAccent">@color/PoslednaPlava</item>
+        <item name="android:colorBackground">@color/PopsledenTemnaCrna</item>
 
 
-        <item name="windowActionBar">false</item>
-        <item name="windowActionBarOverlay">true</item>
-        <item name="android:windowActionBarOverlay">true</item>
-
-
-
-        <item name="android:itemBackground">@color/tab</item>
+        <item name="android:itemBackground">@color/PopsledenTemnaCrna</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -26,17 +20,7 @@
 
     </style>
 
-
-    <style name="CustomActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:windowActionBarOverlay">true</item>
-        <!-- Support library compatibility -->
-        <item name="windowActionBarOverlay">true</item>
-    </style>
-
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 

@@ -2,18 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout3"
     android:layout_width="match_parent"
+    android:background="@drawable/forma1goran"
     android:layout_height="120dp"
-    android:gravity="center"
+    android:layout_margin="5dp"
     android:elevation="10dp">
+
 
     <TextView
             android:id="@+id/text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:gravity="center"
+            android:layout_marginLeft="50dp"
             android:text="TEKST"
             android:fontFamily="@font/macswiss"
             android:textColor="@color/Beige"
@@ -21,12 +24,11 @@
 
     <View
         android:id="@+id/crta"
-        android:layout_width="200dp"
-        android:layout_height="1dp"
-        android:layout_centerHorizontal="true"
-        android:background="@color/White"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_width="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linija"
+        android:layout_alignParentLeft="true" />
 
 
 

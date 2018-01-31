@@ -1,29 +1,22 @@
 package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mkdingo.goran.signlangugage.adapter.VPagerAdapter;
-import com.mkdingo.goran.signlangugage.adapter.VPagerAdapterAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.klasi.Zborovi;
 import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -34,7 +27,6 @@ public class FragmentActivity extends AppCompatActivity {
 
     public @BindView(R.id.vPager)ViewPager viewPager;
     VPagerAdapter adapter;
-    VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
     @BindView(R.id.prevbtn)
@@ -57,8 +49,6 @@ public class FragmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_fragment);
 
         ButterKnife.bind(this);
@@ -187,12 +177,10 @@ public class FragmentActivity extends AppCompatActivity {
             });
 
         }else {
-           adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
+
            slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
            int pozicijaBukva = intent.getIntExtra("POSITION2",0);
            slikiAzbuka = slikilista.slikiBukvi.get(pozicijaBukva);
-           adapterAzbuka.addSliki(slikilista.slikiBukvi);
-           viewPager.setAdapter(adapterAzbuka);
            viewPager.setCurrentItem(pozicijaBukva);
         }
 

@@ -22,5 +22,12 @@ public class StaticniSliki implements Serializable{
         this.bukva = bukva;
     }
 
+    @Override
+    public String toString() {
+
+
+
+       return String.valueOf(bukva);
+    }
 }
 
