@@ -57,7 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-        View contactView = inflater.inflate(R.layout.zbor_layout3,parent,false);
+        View contactView = inflater.inflate(R.layout.zbor_layout,parent,false);
         ViewHolder viewHolder = new ViewHolder(contactView);
         return viewHolder;
 
@@ -70,29 +70,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, final int position) {
 
         final Zborovi model = listazborovi.get(position);
-            if(position == 0)
-            {
-                //holder.relative.setBackgroundColor(Color.parseColor("#01579B"));
-                holder.text.setTextColor(Color.parseColor("#01579B"));
-                holder.linija.setBackgroundColor(Color.parseColor("#01579B"));
-    }
-            else if (position == 1)
-            {
-                //holder.relative.setBackgroundColor(Color.parseColor("#1B5E20"));
-                holder.text.setTextColor(Color.parseColor("#1B5E20"));
-                holder.linija.setBackgroundColor(Color.parseColor("#1B5E20"));
-            } else if (position == 2)
-            {
-                //holder.relative.setBackgroundColor(Color.parseColor("#F57F17"));
-                holder.text.setTextColor(Color.parseColor("#F57F17"));
-                holder.linija.setBackgroundColor(Color.parseColor("#F57F17"));
 
-            }else if (position == 3)
-            {
-                //holder.relative.setBackgroundColor(Color.parseColor("#455A64"));
-                holder.text.setTextColor(Color.parseColor("#455A64"));
-                holder.linija.setBackgroundColor(Color.parseColor("#455A64"));
-            }
         holder.text.setText((CharSequence)model.getText());
         holder.relative.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +92,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView text;
         @BindView(R.id.layout3)
         RelativeLayout relative;
-        @BindView(R.id.crta)
-        View linija;
+
 
 
         public ViewHolder(View itemView) {

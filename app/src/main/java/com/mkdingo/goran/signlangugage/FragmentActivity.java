@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class FragmentActivity extends AppCompatActivity {
 
@@ -184,7 +185,14 @@ public class FragmentActivity extends AppCompatActivity {
            viewPager.setCurrentItem(pozicijaBukva);
         }
 
+
+
     }
+
+
+
+
+
 
     @Override
     public void onBackPressed() {
