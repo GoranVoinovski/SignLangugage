@@ -2,10 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout3"
     android:layout_width="match_parent"
-    android:background="@drawable/forma1goran"
+    android:background="@color/portokalova"
     android:layout_height="120dp"
-    android:layout_margin="5dp"
-    android:elevation="10dp">
+    android:layout_margin="1dp">
 
 
     <TextView
@@ -19,17 +18,8 @@
             android:layout_marginLeft="50dp"
             android:text="TEKST"
             android:fontFamily="@font/macswiss"
-            android:textColor="@color/Beige"
+            android:textColor="@color/white"
             android:textSize="23sp" />
-
-    <View
-        android:id="@+id/crta"
-        android:layout_width="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/linija"
-        android:layout_alignParentLeft="true" />
-
 
 
 </RelativeLayout>

@@ -28,8 +28,6 @@ import butterknife.Unbinder;
 public class FragmentSlika extends Fragment {
     @BindView(R.id.img)
     VideoView pic;
-    @BindView(R.id.img1)
-    ImageView pic1;
     private Unbinder mUnbind;
     Sliki zborovi = new Sliki();
 
@@ -49,18 +47,18 @@ public class FragmentSlika extends Fragment {
             }
         });
 
-       if (zborovi.tag.equals("gif")){
-           String path = "android.resource://" + getActivity().getPackageName() + "/" + zborovi.slika;
-           pic.setVideoPath(path);
-           pic.start();
-        }
+        String path = "android.resource://" + getActivity().getPackageName() + "/" + zborovi.slika;
+        pic.setVideoPath(path);
+        pic.start();
 
-       if(zborovi.tag.equals("jpg")){
-           Picasso.with(getActivity()).load(zborovi.slika).into(pic1);
-           pic.setVisibility(View.GONE);
-      }
 
         return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbind.unbind();
     }
 
 }

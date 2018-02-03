@@ -10,9 +10,6 @@
             <shape
                 android:shape="line"
                 android:top="1dip" >
-                <stroke
-                   android:color="@color/PoslednaPlava" android:width="10dp"
-                      />
             </shape>
         </rotate>
     </item>

@@ -51,5 +51,11 @@ public class FragmentAzbuka extends Fragment {
         return view;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mUnbind.unbind();
+    }
+
 }
 

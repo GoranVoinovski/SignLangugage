@@ -8,8 +8,6 @@
         android:centerX="100"
         android:type="linear"
         android:angle="0"
-        android:startColor="@color/trans3"
-        android:endColor="@color/trans3"
         />
     <padding
         android:left="0dp"

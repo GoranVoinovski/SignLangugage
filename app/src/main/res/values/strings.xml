@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">SignLangugage</string>
     <string name="enter_your_name">Внеси име</string>
-    <string name="save">Регистрирај се</string>
-    <string name="what_is_your_name"  formatted="true"> Кое е твоето име? </string>
+    <string name="save">Продолжи</string>
+    <string name="what_is_your_name" formatted="true"> Кое е твоето име? </string>
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-
+    <string name="spinervalue">Одберете буква</string>
     <string name="title_activity_splash_video">SplashVideoActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

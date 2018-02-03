@@ -6,64 +6,68 @@
     android:layout_height="match_parent"
     tools:context="com.mkdingo.goran.signlangugage.SplashGifActivity">
 
-    <RelativeLayout
-        android:id="@+id/rel_oli"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/forma7">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rel_oli"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/forma7">-->
 
-        <TextView
-            android:id="@+id/text_learn_to_sign"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/Black"
-            android:textSize="25sp"
-            android:fontFamily="@font/macbahamas"
-            android:text="Научете го Знаковниот јазик"
-            android:textAlignment="center" />
+        <!--<TextView-->
+            <!--android:id="@+id/text_learn_to_sign"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="25sp"-->
+            <!--android:fontFamily="@font/macbahamas"-->
+            <!--android:text="Научете го Знаковниот јазик"-->
+            <!--android:textAlignment="center" />-->
 
-        <TextView
-            android:id="@+id/image_ime"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="90dp"
-            android:layout_below="@id/text_learn_to_sign"
-            android:textSize="20sp"
-            android:textColor="@color/Beige"
-            android:textAlignment="center" />
+        <!--<TextView-->
+            <!--android:id="@+id/image_ime"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_marginTop="90dp"-->
+            <!--android:layout_below="@id/text_learn_to_sign"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/Beige"-->
+            <!--android:textAlignment="center" />-->
 
-        <TextView
-            android:id="@+id/change_name"
-            android:layout_below="@id/image_ime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/Black"
-            android:textSize="16sp"
-            android:text="Променете го Вашето име"
-            android:textAlignment="center"
-            android:textStyle="normal" />
+        <!--<TextView-->
+            <!--android:id="@+id/change_name"-->
+            <!--android:layout_below="@id/image_ime"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:text="Променете го Вашето име"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textStyle="normal" />-->
 
-        <Button
-            android:id="@+id/button_continue"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-           android:layout_alignParentBottom="true"
-            android:background="@drawable/kopce3"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/macswissbold"
-            android:text="ПРОДОЛЖЕТЕ ПОНАТАКА"
-            android:textColor="@color/plava1"
-            android:textSize="13sp" />
+        <!--<Button-->
+            <!--android:id="@+id/button_continue"-->
+            <!--android:layout_width="240dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+           <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@drawable/kopce3"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:fontFamily="@font/macswissbold"-->
+            <!--android:text="ПРОДОЛЖЕТЕ ПОНАТАКА"-->
+            <!--android:textColor="@color/plava1"-->
+            <!--android:textSize="13sp" />-->
 
 
-    </RelativeLayout>
+    <!--</RelativeLayout>-->
 
-    <ImageView
+    <VideoView
         android:id="@+id/splashGif"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
 
     <TextView
         android:id="@+id/textNazbor"
@@ -82,10 +86,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/strelka_denso"
-        android:text="next"
-        android:textColor="@color/White"
-        android:visibility="invisible" />
+        android:background="@mipmap/arrow_right"
+        android:textColor="@color/White" />
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.mkdingo.goran.signlangugage;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -39,7 +41,7 @@ import butterknife.ButterKnife;
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.vp)ViewPager vPage;
+    public @BindView(R.id.vp)ViewPager vPage;
     @BindView(R.id.tablayout)TabLayout tabs;
     public User user;
 
@@ -75,8 +77,24 @@ public class Home extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Излез").setMessage("Дали сакате да излезете од апликацијата")
+                    .setPositiveButton("ДА", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            builder.setNegativeButton("НЕ", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        builder.create().show();
         }
+
     }
 
     @Override
@@ -118,17 +136,10 @@ public class Home extends AppCompatActivity
             vPage.setCurrentItem(1);
         } else if (id == R.id.about) {
 
-        }
+            Intent intent = new Intent(Home.this,ZaNasActivity.class);
+            startActivity(intent);
 
-//        else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -143,4 +154,6 @@ public class Home extends AppCompatActivity
         adapter.dodadiFragment(new Azbuka(),"Азбука");
         mojpager.setAdapter(adapter);
     }
+
+
 }

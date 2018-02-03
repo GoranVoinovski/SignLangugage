@@ -2,25 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-android:background="@drawable/uber"   >
-
-    <!--<ImageView-->
-        <!--android:id="@+id/imageView"-->
-        <!--android:layout_width="150dp"-->
-        <!--android:layout_height="80dp"-->
-        <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
-        <!--app:srcCompat="@drawable/uber" />-->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="@color/Brown"
-        android:text="ЗНАКОВЕН ЈАЗИК"
-         />
+    android:layout_height="@dimen/nav_header_height">
 
 
 

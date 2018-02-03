@@ -13,4 +13,8 @@ public class Sliki implements Serializable{
    public String tag;
 
 
+   @Override
+   public String toString() {
+      return tag;
+   }
 }

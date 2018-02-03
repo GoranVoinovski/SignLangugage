@@ -2,16 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mkdingo.goran.signlangugage">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -28,7 +28,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".SplashGifActivity" />
-        <activity android:name=".shareOnFBActivity"></activity>
+        <activity android:name=".shareOnFBActivity" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationName"
@@ -37,12 +37,12 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <provider android:authorities="com.facebook.app.FacebookContentProvider143589382996969"
+        <provider
             android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider143589382996969"
             android:exported="true" />
 
+        <activity android:name=".ZaNasActivity"></activity>
     </application>
-
-
 
 </manifest>

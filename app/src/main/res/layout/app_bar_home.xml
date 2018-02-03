@@ -11,9 +11,10 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:fitsSystemWindows="true"
-        android:background="@color/bojapozadina"
+        android:padding="10dp"
+        android:background="@color/portokalova"
         android:theme="@style/AppTheme.AppBarOverlay"
-        android:layout_height="60dp">
+        android:layout_height="90dp">
 
 
 

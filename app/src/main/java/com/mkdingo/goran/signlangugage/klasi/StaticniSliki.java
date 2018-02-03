@@ -29,5 +29,6 @@ public class StaticniSliki implements Serializable{
 
        return String.valueOf(bukva);
     }
+
 }
 

@@ -100,12 +100,10 @@ public class FragmentActivity extends AppCompatActivity {
                 for (int i = 0; i < myTextViews.size(); i++) {
                     if (i == pozicijaBukva){
                         myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                        myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
                         myTextViews.get(i).setTextSize(50);
 
                     }else {
-                        myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
-                        myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                        myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
                         myTextViews.get(i).setTextSize(30);
 
                     }
@@ -133,11 +131,9 @@ public class FragmentActivity extends AppCompatActivity {
 
                         if (i == pozicijaBukva){
                             myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
                             myTextViews.get(i).setTextSize(50);
                         }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
-                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
                             myTextViews.get(i).setTextSize(30);
                         }
                     }
@@ -162,16 +158,14 @@ public class FragmentActivity extends AppCompatActivity {
                 }
 
                     viewPager.setCurrentItem(pozicijaBukva);
-                    for (int i = 0; i < myTextViews.size(); i--) {
+                    for (int i = pozicijaBukva; i < myTextViews.size(); i--) {
 
-                        if (i == pozicijaBukva){
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv_odbrano);
-                            myTextViews.get(i).setTextSize(50);
-                        }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.black));
-                            myTextViews.get(i).setBackgroundResource(R.drawable.background_tv);
+                        if (i != pozicijaBukva){
+                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
                             myTextViews.get(i).setTextSize(30);
+                        }else {
+                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
+                            myTextViews.get(i).setTextSize(50);
                         }
                    }
                 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout3"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="end|center"
+    android:elevation="10dp">
+
+
+    <TextView
+            android:id="@+id/text"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="TEKST"
+            android:gravity="end|center"
+            android:background="@drawable/forma1goran"
+            android:fontFamily="@font/macswiss"
+            android:textColor="@color/white"
+            android:paddingRight="5dp"
+            android:textSize="23sp" />
+
+
+
+</RelativeLayout>

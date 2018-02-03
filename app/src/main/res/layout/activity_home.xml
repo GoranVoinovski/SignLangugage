@@ -17,12 +17,25 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:background="@color/Beige"
+        android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_home"
-        app:menu="@menu/activity_home_drawer" />
+        app:menu="@menu/activity_home_drawer">
+
+       <TextView
+           android:text="ЗНАКОВЕН ЈАЗИК"
+           android:gravity="center"
+           android:layout_marginTop="40dp"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           style="@style/Base.TextAppearance.AppCompat.Medium"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

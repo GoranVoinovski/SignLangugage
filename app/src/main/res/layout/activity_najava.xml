@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pozadina4"
+    android:background="@drawable/gradian_color"
     tools:context="com.mkdingo.goran.signlangugage.Najava">
 
 
@@ -13,12 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="1dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/macswiss"
         android:text="@string/what_is_your_name"
-        android:textColor="@color/Beige"
-        android:textSize="25sp" />
+        android:textColor="@color/grey_700"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtname"
@@ -30,35 +29,27 @@
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:background="@drawable/forma6"
-        android:fontFamily="@font/macbahamas"
         android:gravity="center"
         android:hint="@string/enter_your_name"
+        android:textColorHint="@color/grey_600"
         android:textSize="23sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtname"
-        android:layout_centerHorizontal="true"
-        android:text="Користете тастатура со Македонска поддршка"
-        android:textColor="@color/Bisque"
-        android:textSize="12sp" />
 
     <Button
         android:id="@+id/save"
-        android:layout_width="170dp"
+        android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/edtname"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/forma2"
-        android:textSize="12sp"
-        android:fontFamily="@font/macswissbold"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/forma8"
+        android:textStyle="bold"
+        style="@style/Base.TextAppearance.AppCompat.Menu"
+        android:fontFamily="sans-serif"
         android:text="@string/save"
-        android:textColor="@color/Bisque" />
+        android:textColor="@color/grey_700" />
 
 
 </RelativeLayout>

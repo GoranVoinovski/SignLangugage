@@ -1,17 +1,15 @@
 <resources>
 
-    <!-- Base application theme. -->
+     Base application theme.
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
 
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/PopsledenTemnaCrna</item>
-        <item name="colorPrimaryDark">@color/PopsledenTemnaCrna</item>
-        <item name="colorAccent">@color/PoslednaPlava</item>
-        <item name="android:colorBackground">@color/PopsledenTemnaCrna</item>
+        <item name="android:colorBackground">@color/black</item>
 
 
-        <item name="android:itemBackground">@color/PopsledenTemnaCrna</item>
+        <item name="android:itemBackground">@color/black</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -33,7 +31,7 @@
     </style>
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
+
 
     </style>
 

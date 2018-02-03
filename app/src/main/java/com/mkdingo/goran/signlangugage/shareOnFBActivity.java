@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -49,7 +51,7 @@ public class shareOnFBActivity extends AppCompatActivity {
     @BindView(R.id.textSoIme)
     TextView imeSoTekst;
     @BindView(R.id.slideshow)
-    ImageView slajdSliki;
+    VideoView slajdSliki;
     ImageButton tviter;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
@@ -127,7 +129,16 @@ public class shareOnFBActivity extends AppCompatActivity {
                         public void run() {
 
                             slika = zbor.contents.get(count++);
-                            slajdSliki.setImageResource(slika.slika);
+                            slajdSliki.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                @Override
+                                public void onPrepared(MediaPlayer mp) {
+                                    mp.setLooping(false);
+                                }
+                            });
+
+                            String path = "android.resource://" + shareOnFBActivity.this.getPackageName() + "/" + slika.slika;
+                            slajdSliki.setVideoPath(path);
+                            slajdSliki.start();
                             if (count >= zbor.contents.size()) {
                                 count = 0;
 
@@ -135,7 +146,7 @@ public class shareOnFBActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 0, 3000);
+            }, 0, 5000);
 
             new Timer().scheduleAtFixedRate(new TimerTask() {
                 @Override
@@ -152,7 +163,7 @@ public class shareOnFBActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }, 0, 3000);
+            }, 0, 5000);
 
 
     }

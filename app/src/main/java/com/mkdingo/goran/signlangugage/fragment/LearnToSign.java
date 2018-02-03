@@ -53,6 +53,7 @@ public class LearnToSign extends Fragment{
                     startActivity(intent1);
 
 
+
                 }else {
 
                     Intent intent = new Intent(getActivity(), FragmentActivity.class);
