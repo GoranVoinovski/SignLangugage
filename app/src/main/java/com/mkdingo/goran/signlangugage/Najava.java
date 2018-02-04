@@ -2,6 +2,7 @@ package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,6 +14,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +39,8 @@ public class Najava extends AppCompatActivity {
     Button saveUser;
     @BindView(R.id.textView)
     TextView textView;
+    @BindView(R.id.slikaBrainster)
+    ImageView logoBrainster;
     User user;
     SlikiAzbuka sliki = new SlikiAzbuka();
 
@@ -573,7 +577,14 @@ public class Najava extends AppCompatActivity {
 //        userName.setText( userName.getText() +  dodadiBukva.toString());
 
     }
-
+    @OnClick(R.id.slikaBrainster)
+    public void onClick(View v){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://brainster.co/"));
+        startActivity(intent);
+    }
 
 
 
