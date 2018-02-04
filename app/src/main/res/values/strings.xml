@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SignLangugage</string>
+    <string name="app_name">Знаковен Јазик</string>
     <string name="enter_your_name">Внеси име</string>
     <string name="save">Продолжи</string>
     <string name="what_is_your_name" formatted="true"> Кое е твоето име? </string>

@@ -40,6 +40,7 @@ public class Najava extends AppCompatActivity {
     User user;
     SlikiAzbuka sliki = new SlikiAzbuka();
 
+    String dodadiBukva = " ";
 
 
     @Override
@@ -326,4 +327,256 @@ public class Najava extends AppCompatActivity {
 
         return slikiArrayList;
     }
+
+
+    @OnClick(R.id.њ)
+    public void klik1(View v) {
+
+        dodadiBukva = "Њ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.љ)
+    public void klik2(View v) {
+
+        dodadiBukva = "Љ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+
+    @OnClick(R.id.е)
+    public void klik3(View v) {
+
+        dodadiBukva = "Е";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.р)
+    public void klik4(View v) {
+
+        dodadiBukva = "Р";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.т)
+    public void klik5(View v) {
+
+        dodadiBukva = "Т";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.ѕ)
+    public void klik6(View v) {
+
+        dodadiBukva = "Ѕ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.у)
+    public void klik7(View v) {
+
+        dodadiBukva = "У";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.и)
+    public void klik8(View v) {
+
+        dodadiBukva = "И";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.о)
+    public void klik9(View v) {
+
+        dodadiBukva = "О";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.п)
+    public void klik10(View v) {
+
+        dodadiBukva = "П";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.ш)
+    public void klik11(View v) {
+
+        dodadiBukva = "Ш";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.а)
+    public void klik12(View v) {
+
+        dodadiBukva = "А";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.с)
+    public void klik13(View v) {
+
+        dodadiBukva = "С";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.д)
+    public void klik14(View v) {
+
+        dodadiBukva = "Д";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.ф)
+    public void klik15(View v) {
+
+        dodadiBukva = "Ф";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.г)
+    public void klik16(View v) {
+
+        dodadiBukva = "Г";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.х)
+    public void klik17(View v) {
+
+        dodadiBukva = "Х";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.ј)
+    public void klik18(View v) {
+
+        dodadiBukva = "Ј";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.к)
+    public void klik19(View v) {
+
+        dodadiBukva = "К";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.л)
+    public void klik20(View v) {
+
+        dodadiBukva = "Л";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.ч)
+    public void klik21(View v) {
+
+        dodadiBukva = "Ч";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.ќ)
+    public void klik22(View v) {
+
+        dodadiBukva = "Ќ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.з)
+    public void klik23(View v) {
+
+        dodadiBukva = "З";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.џ)
+    public void klik24(View v) {
+
+        dodadiBukva = "Џ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.ц)
+    public void klik25(View v) {
+
+        dodadiBukva = "Ц";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.в)
+    public void klik26(View v) {
+
+        dodadiBukva = "В";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.б)
+    public void klik27(View v) {
+
+        dodadiBukva = "Б";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.н)
+    public void klik28(View v) {
+
+        dodadiBukva = "Н";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+
+    @OnClick(R.id.м)
+    public void klik29(View v) {
+
+        dodadiBukva = "М";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.ѓ)
+    public void klik30(View v) {
+
+        dodadiBukva = "Ѓ";
+        userName.setText( userName.getText()+  dodadiBukva.toString());
+
+    }
+    @OnClick(R.id.ж)
+    public void klik31(View v) {
+
+        dodadiBukva = "Ж";
+        userName.setText( dodadiBukva.toString() + userName.getText());
+
+    }
+
+    @OnClick(R.id.del)
+    public void klik32(View v) {
+
+//        dodadiBukva = " ";
+//        userName.setText( userName.getText() +  dodadiBukva.toString());
+
+    }
+
+
+
+
+
+
 }
