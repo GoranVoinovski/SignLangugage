@@ -4,33 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/portokalova"
+
+  android:background="@color/white"
     tools:context="com.mkdingo.goran.signlangugage.ZaNasActivity">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
-        android:id="@+id/progrmer1"
+        android:id="@+id/progrmerb"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/slikab"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="@drawable/brainster"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/textb"
+            android:layout_below="@id/slikab"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progrmer1"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_below="@id/progrmerb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/slika1"/>
+        <ImageView
             android:id="@+id/slika1"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
-
-        <TextView
-            android:id="@+id/mail1"
-            android:layout_toRightOf="@id/slika1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/linked1"
-            android:layout_below="@id/mail1"
-            android:layout_toRightOf="@id/slika1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/linkedin"/>
 
     </RelativeLayout>
 
@@ -45,27 +63,23 @@
         <ImageView
             android:id="@+id/slika2"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/linkedin"/>
 
         <TextView
-            android:id="@+id/mail2"
+            android:id="@+id/text2"
             android:layout_toRightOf="@id/slika2"
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
-        <TextView
-            android:id="@+id/linked2"
-            android:layout_below="@id/mail2"
-            android:layout_toRightOf="@id/slika2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/progrmer3"
-        android:layout_marginTop="20dp"
         android:padding="10dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@id/progrmer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -73,17 +87,12 @@
         <ImageView
             android:id="@+id/slika3"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/linkedin"/>
+
 
         <TextView
-            android:id="@+id/mail3"
-            android:layout_toRightOf="@id/slika3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/linked3"
-            android:layout_below="@id/mail3"
+            android:id="@+id/text3"
             android:layout_toRightOf="@id/slika3"
             android:layout_width="match_parent"
             android:layout_height="30dp" />
@@ -101,17 +110,12 @@
         <ImageView
             android:id="@+id/slika4"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:background="@drawable/linkedin"/>
+
 
         <TextView
-            android:id="@+id/mail4"
-            android:layout_toRightOf="@id/slika4"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <TextView
-            android:id="@+id/linked4"
-            android:layout_below="@id/mail4"
+            android:id="@+id/text4"
             android:layout_toRightOf="@id/slika4"
             android:layout_width="match_parent"
             android:layout_height="30dp" />

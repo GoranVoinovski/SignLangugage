@@ -12,6 +12,7 @@ import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import java.util.ArrayList;
 
 /**
+<<<<<<< HEAD
  * Created by Goran on 2/3/2018.
  */
 

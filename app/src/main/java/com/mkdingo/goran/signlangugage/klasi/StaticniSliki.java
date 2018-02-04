@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * Created by Goran on 1/25/2018.
  */
 
-public class StaticniSliki implements Serializable{
+public class StaticniSliki implements Serializable {
 
-   public Sliki Slika;
-   public char bukva;
+    public Sliki Slika;
+    public char bukva;
 
     public StaticniSliki() {
     }
@@ -26,8 +26,7 @@ public class StaticniSliki implements Serializable{
     public String toString() {
 
 
-
-       return String.valueOf(bukva);
+        return String.valueOf(bukva);
     }
 
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * Created by Goran on 1/28/2018.
  */
 
-public class SlikiAzbuka implements Serializable{
+public class SlikiAzbuka implements Serializable {
 
-  public  ArrayList<StaticniSliki>slikiBukvi;
+    public ArrayList<StaticniSliki> slikiBukvi;
 }

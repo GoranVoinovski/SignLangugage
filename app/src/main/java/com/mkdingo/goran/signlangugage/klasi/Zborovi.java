@@ -7,10 +7,10 @@ import java.util.ArrayList;
  * Created by Oliver on 1/19/2018.
  */
 
-public class Zborovi implements Serializable{
-  public ArrayList<Sliki> contents;
-  public String text;
-  public ArrayList<Character> bukvi;
+public class Zborovi implements Serializable {
+    public ArrayList<Sliki> contents;
+    public String text;
+    public ArrayList<Character> bukvi;
 
 
     public ArrayList<Sliki> getContents() {

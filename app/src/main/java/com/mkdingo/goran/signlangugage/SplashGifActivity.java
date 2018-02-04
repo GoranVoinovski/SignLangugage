@@ -80,7 +80,7 @@ public class SplashGifActivity extends AppCompatActivity {
 //
 //
 //            }
-
+//
         gif.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -91,7 +91,7 @@ public class SplashGifActivity extends AppCompatActivity {
         String path = "android.resource://" + this.getPackageName() + "/" + R.raw.jas_se_vikam;
         gif.setVideoPath(path);
         gif.start();
-        tekst.setText("ЈАС СУМ");
+        tekst.setText("Јас се викам");
     }
 
     @OnClick(R.id.next)

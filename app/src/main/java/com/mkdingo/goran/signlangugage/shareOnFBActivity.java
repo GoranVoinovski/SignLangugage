@@ -61,6 +61,7 @@ public class shareOnFBActivity extends AppCompatActivity {
     Timer myTimer;
     Zborovi zbor;
     Sliki slika;
+    Bitmap slikaFB;
     char a;
     int count = 0;
     int count2 = 0;
@@ -72,6 +73,7 @@ public class shareOnFBActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_share_on_fb);
+//        slikaFB = BitmapFactory.decodeResource(this.getResources(), R.raw.l);
         ButterKnife.bind(this);
         myTimer = new Timer();
         callbackManager = CallbackManager.Factory.create();
@@ -192,7 +194,7 @@ public class shareOnFBActivity extends AppCompatActivity {
 
 
     public void shareTwitter(String message) {
-              Intent tweetIntent = new Intent(Intent.ACTION_SEND);
+        Intent tweetIntent = new Intent(Intent.ACTION_SEND);
         tweetIntent.putExtra(Intent.EXTRA_TEXT, "This is a Test.");
         tweetIntent.setType("text/plain");
 

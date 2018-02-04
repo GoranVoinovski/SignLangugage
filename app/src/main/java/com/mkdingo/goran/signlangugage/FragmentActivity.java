@@ -159,7 +159,7 @@ public class FragmentActivity extends AppCompatActivity {
                         pozicijaBukva--;
                     }else if (pozicijaBukva < 0){
                         pozicijaBukva = 0;
-                }
+                    }
 
                     viewPager.setCurrentItem(pozicijaBukva);
                     for (int i = pozicijaBukva; i < myTextViews.size(); i--) {
@@ -171,7 +171,7 @@ public class FragmentActivity extends AppCompatActivity {
                             myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
                             myTextViews.get(i).setTextSize(50);
                         }
-                   }
+                    }
                 }
             });
 
