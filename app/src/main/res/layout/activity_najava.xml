@@ -23,33 +23,394 @@
         android:id="@+id/edtname"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:inputType="textCapCharacters"
-        android:digits="АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ"
-        android:maxLength="15"
         android:layout_below="@id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:digits="АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШ"
         android:gravity="center"
         android:hint="@string/enter_your_name"
+        android:inputType="textCapCharacters"
+        android:maxLength="15"
         android:textColorHint="@color/grey_600"
         android:textSize="23sp" />
 
     <Button
         android:id="@+id/save"
+        style="@style/Base.TextAppearance.AppCompat.Menu"
         android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
         android:layout_height="45dp"
         android:layout_below="@id/edtname"
-        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/forma8"
-        android:textStyle="bold"
-        style="@style/Base.TextAppearance.AppCompat.Menu"
         android:fontFamily="sans-serif"
         android:text="@string/save"
-        android:textColor="@color/grey_700" />
+        android:textColor="@color/grey_700"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/tastaturaLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/prvdel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/PosledenKafena"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/љ"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/tastatura"
+                android:padding="2dp"
+                android:text="љ" />
+
+            <Button
+                android:id="@+id/њ"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/tastatura"
+                android:padding="2dp"
+                android:text="њ" />
+
+            <Button
+                android:id="@+id/е"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/tastatura"
+                android:padding="2dp"
+                android:text="е" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/р"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="р" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/т"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="т" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ѕ"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ѕ" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/у"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="у" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/и"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="и" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/о"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="о" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/п"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="п" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ш"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ш" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vtordel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prvdel"
+            android:background="@color/PosledenKafena"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/а"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="а" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/с"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="с" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/д"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="д" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ф"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ф" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/г"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="г" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/х"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="х" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ј"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ј" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/к"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="к" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/л"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="л" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ч"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ч" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ќ"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ќ" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/tretdel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vtordel"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/PosledenKafena"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/з"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="з" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/џ"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="џ" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ц"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ц" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/в"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="в" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/б"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="б" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/н"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="н" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/м"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="м" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ѓ"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ѓ" />
+
+            <Button
+                android:background="@drawable/tastatura"
+                android:id="@+id/ж"
+                android:layout_marginRight="2dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="ж" />
+
+            <Button
+                android:id="@+id/del"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/tastatura"
+                android:text="del" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
