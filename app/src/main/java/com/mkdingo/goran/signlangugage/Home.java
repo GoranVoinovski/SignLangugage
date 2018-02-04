@@ -3,6 +3,7 @@ package com.mkdingo.goran.signlangugage;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -22,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.adapter.HomePagerAdapter;
@@ -37,6 +39,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,6 +47,8 @@ public class Home extends AppCompatActivity
     public @BindView(R.id.vp)ViewPager vPage;
     @BindView(R.id.tablayout)TabLayout tabs;
     public User user;
+    @BindView(R.id.brainster)
+    ImageView brainster1;
 
 
     @Override
@@ -158,6 +163,14 @@ public class Home extends AppCompatActivity
         adapter.dodadiFragment(new LearnToSign(),"Говори со знаци");
         adapter.dodadiFragment(new Azbuka(),"Азбука");
         mojpager.setAdapter(adapter);
+    }
+    @OnClick(R.id.brainster)
+    public void Klik(View view){
+        Intent i = new Intent();
+        i.putExtra(Intent.EXTRA_TEXT, "");
+        i.setAction(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://brainster.co/"));
+        startActivity(i);
     }
 
 
