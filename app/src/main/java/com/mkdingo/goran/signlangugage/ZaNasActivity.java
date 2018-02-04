@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ZaNasActivity extends AppCompatActivity {
     @BindView(R.id.progrmer1)RelativeLayout programerInfo1;
@@ -32,6 +33,7 @@ public class ZaNasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_za_nas);
+        ButterKnife.bind(this);
 
     }
 }

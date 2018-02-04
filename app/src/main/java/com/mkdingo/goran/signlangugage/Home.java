@@ -135,7 +135,11 @@ public class Home extends AppCompatActivity
            vPage.setCurrentItem(0);
         }else if (id == R.id.azbuka) {
             vPage.setCurrentItem(1);
-        } else if (id == R.id.about) {
+        } else if (id==R.id.promenaIme){
+            Intent intent2 = new Intent(Home.this,Najava.class);
+            startActivity(intent2);
+        }
+        else if (id == R.id.about) {
 
             Intent intent = new Intent(Home.this,ZaNasActivity.class);
             startActivity(intent);

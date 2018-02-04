@@ -13,6 +13,10 @@
             android:id="@+id/azbuka"
 
             android:title="Азбука и знаци" />
+        <item
+            android:id="@+id/promenaIme"
+
+            android:title="Променете го Вашето име" />
 
     </group>
 
@@ -21,5 +25,6 @@
         android:id="@+id/about"
 
         android:title="За нас" />
+
 
 </menu>
