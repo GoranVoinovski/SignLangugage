@@ -26,22 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
-    <ImageButton
-        android:id="@+id/prevbtn"
-        android:layout_gravity="bottom"
-        android:src="@mipmap/arrow_left"
-        android:textColor="@color/White"
-        android:background="@mipmap/arrow_left"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="2dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+
 
     <ImageButton
         android:id="@+id/nextbtn"
         android:textColor="@color/White"
         android:background="@mipmap/arrow_right"
-        android:src="@mipmap/arrow_right"
         android:layout_gravity="bottom|right"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="2dp"

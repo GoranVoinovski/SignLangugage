@@ -32,8 +32,7 @@ public class FragmentActivity extends AppCompatActivity {
     VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
-    @BindView(R.id.prevbtn)
-    ImageButton previousbtn;
+
     public @BindView(R.id.nextbtn)
     ImageButton nextbutton;
     @BindView(R.id.llBukvi)
@@ -93,10 +92,9 @@ public class FragmentActivity extends AppCompatActivity {
                     }
                 }else {
                     nextbutton.setVisibility(View.INVISIBLE);
-                    previousbtn.setVisibility(View.INVISIBLE);
+
                     tekstodzbor.setText(zborovi.text);
                 }
-            } else {
             }
 
 
@@ -112,29 +110,7 @@ public class FragmentActivity extends AppCompatActivity {
                 }
             });
 
-            previousbtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                    if (pozicijaBukva > 0){
-                        pozicijaBukva--;
-                    }else if (pozicijaBukva < 0){
-                        pozicijaBukva = 0;
-                    }
-
-                    viewPager.setCurrentItem(pozicijaBukva);
-                    for (int i = pozicijaBukva; i < myTextViews.size(); i--) {
-
-                        if (i != pozicijaBukva){
-                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
-                            myTextViews.get(i).setTextSize(30);
-                        }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                            myTextViews.get(i).setTextSize(50);
-                        }
-                    }
-                }
-            });
 
         }else {
 
