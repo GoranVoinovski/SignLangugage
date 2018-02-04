@@ -88,7 +88,7 @@ public class SplashGifActivity extends AppCompatActivity {
             }
         });
 
-        String path = "android.resource://" + this.getPackageName() + "/" + R.raw.iamblue;
+        String path = "android.resource://" + this.getPackageName() + "/" + R.raw.jas_se_vikam;
         gif.setVideoPath(path);
         gif.start();
         tekst.setText("ЈАС СУМ");

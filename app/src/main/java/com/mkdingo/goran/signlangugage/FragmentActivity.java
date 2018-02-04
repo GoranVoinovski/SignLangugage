@@ -104,7 +104,7 @@ public class FragmentActivity extends AppCompatActivity {
                         myTextViews.get(i).setTextSize(50);
 
                     }else {
-                        myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
+                        myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
                         myTextViews.get(i).setTextSize(30);
 
                     }
@@ -137,7 +137,7 @@ public class FragmentActivity extends AppCompatActivity {
                             myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
                             myTextViews.get(i).setTextSize(50);
                         }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
+                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
                             myTextViews.get(i).setTextSize(30);
                         }
                     }
@@ -165,7 +165,7 @@ public class FragmentActivity extends AppCompatActivity {
                     for (int i = pozicijaBukva; i < myTextViews.size(); i--) {
 
                         if (i != pozicijaBukva){
-                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_600));
+                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
                             myTextViews.get(i).setTextSize(30);
                         }else {
                             myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
@@ -184,13 +184,7 @@ public class FragmentActivity extends AppCompatActivity {
             adapterAzbuka.addSliki(slikilista.slikiBukvi);
             viewPager.setAdapter(adapterAzbuka);
             viewPager.setCurrentItem(pozicijaBukva);
-            viewPager.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
 
-
-                    return true;                }
-            });
         }
     }
 
@@ -201,6 +195,8 @@ public class FragmentActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        Intent intent = new Intent(this,Home.class);
+        startActivity(intent);
+        finish();
     }
 }
