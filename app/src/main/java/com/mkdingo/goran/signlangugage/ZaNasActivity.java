@@ -62,7 +62,7 @@ public class ZaNasActivity extends AppCompatActivity {
         Intent i = new Intent();
         i.putExtra(Intent.EXTRA_TEXT, "");
         i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://www.linkedin.com/"));
+        i.setData(Uri.parse("https://www.linkedin.com/in/oliver-bozinovski"));
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }
