@@ -100,6 +100,7 @@ public class SplashGifActivity extends AppCompatActivity {
       Intent intent = new Intent(SplashGifActivity.this,FragmentActivity.class);
       intent.putExtra("EXTRA",zbor);
       intent.putExtra("POSITION", position);
+      intent.putExtra("Start","Start");
       startActivity(intent);
       finish();
 

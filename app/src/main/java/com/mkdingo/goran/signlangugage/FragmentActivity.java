@@ -1,6 +1,7 @@
 package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ public class FragmentActivity extends AppCompatActivity {
     TextView tekstodzbor;
     @BindView(R.id.prevbtn)
     ImageButton previousbtn;
-    @BindView(R.id.nextbtn)
+    public @BindView(R.id.nextbtn)
     ImageButton nextbutton;
     @BindView(R.id.llBukvi)
     LinearLayout bukviLayout;
@@ -41,11 +42,11 @@ public class FragmentActivity extends AppCompatActivity {
     TextView textView;
     int i = 0;
     int pozicijaGif = 0;
+    public String start = "";
     StaticniSliki slikiAzbuka;
     SlikiAzbuka slikilista;
-    ArrayList<TextView>myTextViews;
+    public ArrayList<TextView>myTextViews;
     LinearLayout.LayoutParams params;
-
     User user;
     public Zborovi zborovi;
     @Override
@@ -58,6 +59,7 @@ public class FragmentActivity extends AppCompatActivity {
         slikilista = SharedPreferences.getAzbuka(this);
         Intent intent = getIntent();
         if (intent.hasExtra("EXTRA")){
+            start = "start";
             zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
             final int pozicijaGif = intent.getIntExtra("POSITION",0);
             if (intent.hasExtra("FLAG")){
@@ -97,21 +99,6 @@ public class FragmentActivity extends AppCompatActivity {
             } else {
             }
 
-            if (zborovi.bukvi.size() > 1){
-                for (int i = 0; i < myTextViews.size(); i++) {
-                    if (i == pozicijaBukva){
-                        myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                        myTextViews.get(i).setTextSize(50);
-
-                    }else {
-                        myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
-                        myTextViews.get(i).setTextSize(30);
-
-                    }
-                }
-            }
-
-
 
             adapter.addSliki(zborovi.contents);
             viewPager.setAdapter(adapter);
@@ -122,32 +109,6 @@ public class FragmentActivity extends AppCompatActivity {
 
 
                     return true;
-                }
-            });
-
-
-            nextbutton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    pozicijaBukva++;
-                    viewPager.setCurrentItem(pozicijaBukva);
-                    for (int i = 0; i < myTextViews.size(); i++) {
-
-                        if (i == pozicijaBukva){
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                            myTextViews.get(i).setTextSize(50);
-                        }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
-                            myTextViews.get(i).setTextSize(30);
-                        }
-                    }
-
-                    if (pozicijaBukva == myTextViews.size()){
-                        Intent intent1 = new Intent(FragmentActivity.this,shareOnFBActivity.class);
-                        intent1.putExtra("User", user);
-                        startActivity(intent1);
-                        finish();
-                    }
                 }
             });
 
@@ -187,11 +148,6 @@ public class FragmentActivity extends AppCompatActivity {
 
         }
     }
-
-
-
-
-
 
     @Override
     public void onBackPressed() {

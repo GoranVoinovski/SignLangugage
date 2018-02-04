@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -55,7 +56,18 @@ public class FragmentAzbuka extends Fragment {
 
         String path = "android.resource://" + getActivity().getPackageName() + "/" + sliki.Slika.slika;
         pic1.setVideoPath(path);
-        pic1.start();
+        if (((FragmentActivity)getActivity()).start.equals("")){
+            pic1.start();
+            ((FragmentActivity)getActivity()).start = "new";
+        }
+        ((FragmentActivity)getActivity()).viewPager.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+              pic1.start();
+
+                return false;
+            }
+        });
 
         return view;
     }

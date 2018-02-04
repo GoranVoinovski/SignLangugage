@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -23,12 +23,8 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.share.Sharer;
-import com.facebook.share.model.ShareHashtag;
+
 import com.facebook.share.model.ShareLinkContent;
-import com.facebook.share.model.SharePhoto;
-import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.DeviceShareButton;
-import com.facebook.share.widget.ShareButton;
 import com.facebook.share.widget.ShareDialog;
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
@@ -43,7 +39,6 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class shareOnFBActivity extends AppCompatActivity {
 
@@ -148,22 +143,6 @@ public class shareOnFBActivity extends AppCompatActivity {
                 }
             }, 0, 5000);
 
-            new Timer().scheduleAtFixedRate(new TimerTask() {
-                @Override
-                public void run() {
-                    runOnUiThread(new TimerTask() {
-                        @Override
-                        public void run() {
-
-                            a = zbor.bukvi.get(count2++);
-                            imeSoTekst.setText("" + a);
-                            if (count2 >= zbor.bukvi.size()) {
-                                count2 = 0;
-                            }
-                        }
-                    });
-                }
-            }, 0, 5000);
 
 
     }
