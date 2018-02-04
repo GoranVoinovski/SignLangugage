@@ -31,7 +31,7 @@ public class FragmentAzbuka extends Fragment {
     @BindView(R.id.bukva)
     TextView bukvaPrikaz;
     @BindView(R.id.img1)
-    ImageView pic1;
+    VideoView pic1;
     private Unbinder mUnbind;
     StaticniSliki sliki;
 
@@ -46,7 +46,16 @@ public class FragmentAzbuka extends Fragment {
 
         sliki = (StaticniSliki) getArguments().getSerializable("Slika");
         bukvaPrikaz.setText(sliki.bukva + "");
-        Picasso.with(getActivity()).load(sliki.Slika.slika).centerInside().fit().into(pic1);
+        pic1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+        String path = "android.resource://" + getActivity().getPackageName() + "/" + sliki.Slika.slika;
+        pic1.setVideoPath(path);
+        pic1.start();
 
         return view;
     }

@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mkdingo.goran.signlangugage.adapter.VPagerAdapter;
+import com.mkdingo.goran.signlangugage.adapter.VPagerAdapterAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
@@ -22,12 +23,12 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class FragmentActivity extends AppCompatActivity {
 
     public @BindView(R.id.vPager)ViewPager viewPager;
     VPagerAdapter adapter;
+    VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
     @BindView(R.id.prevbtn)
@@ -117,6 +118,9 @@ public class FragmentActivity extends AppCompatActivity {
             viewPager.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
+
+
+
                     return true;
                 }
             });
@@ -173,14 +177,21 @@ public class FragmentActivity extends AppCompatActivity {
 
         }else {
 
-           slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
-           int pozicijaBukva = intent.getIntExtra("POSITION2",0);
-           slikiAzbuka = slikilista.slikiBukvi.get(pozicijaBukva);
-           viewPager.setCurrentItem(pozicijaBukva);
+            adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
+            slikiAzbuka = (StaticniSliki) intent.getSerializableExtra("EXTRA2");
+            int pozicijaBukva = intent.getIntExtra("POSITION2",0);
+            slikiAzbuka = slikilista.slikiBukvi.get(pozicijaBukva);
+            adapterAzbuka.addSliki(slikilista.slikiBukvi);
+            viewPager.setAdapter(adapterAzbuka);
+            viewPager.setCurrentItem(pozicijaBukva);
+            viewPager.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+
+                    return true;                }
+            });
         }
-
-
-
     }
 
 

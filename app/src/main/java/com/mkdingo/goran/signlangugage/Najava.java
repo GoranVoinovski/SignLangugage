@@ -2,7 +2,6 @@ package com.mkdingo.goran.signlangugage;
 
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,7 +13,6 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,12 +37,9 @@ public class Najava extends AppCompatActivity {
     Button saveUser;
     @BindView(R.id.textView)
     TextView textView;
-    @BindView(R.id.slikaBrainster)
-    ImageView logoBrainster;
-    User user;
     SlikiAzbuka sliki = new SlikiAzbuka();
-
     String dodadiBukva = " ";
+
 
 
     @Override
@@ -100,7 +95,6 @@ public class Najava extends AppCompatActivity {
         SharedPreferences.addUser(user, Najava.this);
         Intent intent = new Intent(Najava.this, Home.class);
         startActivity(intent);
-        Toast.makeText(this, "Успешно се регистриравте", Toast.LENGTH_SHORT).show();
         finish();
     }
 
@@ -332,12 +326,12 @@ public class Najava extends AppCompatActivity {
         return slikiArrayList;
     }
 
-
     @OnClick(R.id.њ)
     public void klik1(View v) {
 
         dodadiBukva = "Њ";
         userName.setText( userName.getText()+  dodadiBukva.toString());
+        userName.setSelection(userName.getText().length());
 
     }
 
@@ -346,7 +340,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Љ";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
 
@@ -355,7 +349,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Е";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.р)
@@ -363,7 +357,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Р";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.т)
@@ -371,7 +365,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Т";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.ѕ)
@@ -379,7 +373,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Ѕ";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.у)
@@ -387,14 +381,14 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "У";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.и)
     public void klik8(View v) {
 
         dodadiBukva = "И";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.о)
@@ -402,14 +396,14 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "О";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.п)
     public void klik10(View v) {
 
         dodadiBukva = "П";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.ш)
@@ -417,7 +411,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Ш";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.а)
@@ -425,7 +419,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "А";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.с)
@@ -433,7 +427,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "С";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.д)
@@ -441,7 +435,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Д";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.ф)
@@ -449,14 +443,14 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Ф";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.г)
     public void klik16(View v) {
 
         dodadiBukva = "Г";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.х)
@@ -464,7 +458,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Х";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.ј)
@@ -472,21 +466,21 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Ј";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.к)
     public void klik19(View v) {
 
         dodadiBukva = "К";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.л)
     public void klik20(View v) {
 
         dodadiBukva = "Л";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.ч)
@@ -494,14 +488,14 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Ч";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.ќ)
     public void klik22(View v) {
 
         dodadiBukva = "Ќ";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.з)
@@ -509,7 +503,7 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "З";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.џ)
@@ -517,35 +511,35 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "Џ";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.ц)
     public void klik25(View v) {
 
         dodadiBukva = "Ц";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.в)
     public void klik26(View v) {
 
         dodadiBukva = "В";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.б)
     public void klik27(View v) {
 
         dodadiBukva = "Б";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.н)
     public void klik28(View v) {
 
         dodadiBukva = "Н";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.м)
@@ -553,41 +547,42 @@ public class Najava extends AppCompatActivity {
 
         dodadiBukva = "М";
         userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.ѓ)
     public void klik30(View v) {
 
         dodadiBukva = "Ѓ";
-        userName.setText( userName.getText()+  dodadiBukva.toString());
-
+        userName.setText(userName.getText()+  dodadiBukva.toString());
+        userName.setSelection(userName.getText().length());
     }
     @OnClick(R.id.ж)
     public void klik31(View v) {
 
         dodadiBukva = "Ж";
-        userName.setText( dodadiBukva.toString() + userName.getText());
-
+        userName.setText(userName.getText() + dodadiBukva.toString());
+        userName.setSelection(userName.getText().length());
     }
 
     @OnClick(R.id.del)
     public void klik32(View v) {
 
-//        dodadiBukva = " ";
-//        userName.setText( userName.getText() +  dodadiBukva.toString());
+        if (dodadiBukva != null && dodadiBukva.length() > 0){
+
+            String kratenka = userName.getText().toString();
+            dodadiBukva = kratenka.substring(0,kratenka.length() - 1);
+            userName.setText(dodadiBukva);
+            userName.setSelection(userName.getText().length());
+        }
+
+
 
     }
-    @OnClick(R.id.slikaBrainster)
-    public void onClick(View v){
-        Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://brainster.co/"));
-        startActivity(intent);
-    }
+
 
 
 
 
 
 }
+

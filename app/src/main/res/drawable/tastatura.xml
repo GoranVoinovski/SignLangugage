@@ -9,7 +9,7 @@
 
         android:startColor="@color/WhiteSmoke"
         android:centerColor="@color/plava6"
-    android:endColor="@color/WhiteSmoke"
+        android:endColor="@color/WhiteSmoke"
         />
     <stroke
         android:width="0dp"
