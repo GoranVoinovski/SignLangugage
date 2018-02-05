@@ -60,14 +60,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         inflater = LayoutInflater.from(context);
         ViewHolder view = new ViewHolder (inflater.inflate(R.layout.zbor_layout3,parent,false));;
 
-
-//                if (viewType == 0) {
-//                    view = new ViewHolder (inflater.inflate(R.layout.zbor_layout5,parent,false));
-//                    return view; // view holder for normal items
-//                } else if (viewType == 1) {
-//                    view = new ViewHolder (inflater.inflate(R.layout.zbor_layout4,parent,false));
-//                    return view; // view holder for header items
-//                }
         return view;
     }
 
@@ -87,16 +79,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         });
 
        }
-
-//
-//    @Override
-//    public int getItemViewType(int position) {
-//        if (position % 2 == 0){
-//            return 0;
-//        }else
-//
-//     return 1;
-//    }
 
     @Override
     public int getItemCount() {

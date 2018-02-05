@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:screenOrientation="portrait"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/logo"
@@ -23,12 +24,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".Home"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".FragmentActivity" />
-        <activity android:name=".SplashGifActivity" />
-        <activity android:name=".shareOnFBActivity" />
+        <activity android:name=".FragmentActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SplashGifActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".shareOnFBActivity" android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationName"
@@ -42,7 +44,7 @@
             android:authorities="com.facebook.app.FacebookContentProvider143589382996969"
             android:exported="true" />
 
-        <activity android:name=".ZaNasActivity"></activity>
+        <activity android:name=".ZaNasActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

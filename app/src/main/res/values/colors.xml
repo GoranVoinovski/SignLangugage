@@ -15,7 +15,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="White">#FFFFFF</color>
+    <color name="White">#ffffff</color>
     <color name="portokalova">#F28E6C</color>
     <color name="accent_material_light">#000000</color>
     <color name="portokalova2">#eda58c</color>
@@ -23,7 +23,6 @@
     <color name="WhiteSmoke">#F5F5F5</color>
     <color name="plava6">#c7cce1</color>
     <color name="grey_900">#212121</color>
-
 
 
 

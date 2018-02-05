@@ -81,12 +81,17 @@ public class SplashGifActivity extends AppCompatActivity {
 //
 //            }
 //
-        gif.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
+       gif.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+           @Override
+           public void onCompletion(MediaPlayer mp) {
+               Intent intent = new Intent(SplashGifActivity.this,FragmentActivity.class);
+               intent.putExtra("EXTRA",zbor);
+               intent.putExtra("POSITION", position);
+               intent.putExtra("Start","Start");
+               startActivity(intent);
+               finish();
+           }
+       });
 
         String path = "android.resource://" + this.getPackageName() + "/" + R.raw.jas_se_vikam;
         gif.setVideoPath(path);
@@ -96,14 +101,6 @@ public class SplashGifActivity extends AppCompatActivity {
 
     @OnClick(R.id.next)
     public void Prodolzi(){
-
-      Intent intent = new Intent(SplashGifActivity.this,FragmentActivity.class);
-      intent.putExtra("EXTRA",zbor);
-      intent.putExtra("POSITION", position);
-      intent.putExtra("Start","Start");
-      startActivity(intent);
-      finish();
-
-
+        recreate();
     }
 }

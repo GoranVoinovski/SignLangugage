@@ -43,10 +43,16 @@ public class ZaNasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_za_nas);
         ButterKnife.bind(this);
 
+        ProgramerTextb.setText("Brainster Academy");
+        ProgramerText1.setText("Оливер Божиновски");
+        ProgramerText2.setText("Марко Доновски");
+        ProgramerText3.setText("Панче Димовски");
+        ProgramerText4.setText("Горан Воиновски");
+
 
     }
 
-    @OnClick(R.id.textb)
+    @OnClick(R.id.progrmerb)
     public void ClickB (View view){
 
         Intent i = new Intent();
@@ -56,44 +62,44 @@ public class ZaNasActivity extends AppCompatActivity {
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }
-    @OnClick(R.id.text1)
+    @OnClick(R.id.progrmer1)
     public void Click1 (View view){
 
         Intent i = new Intent();
         i.putExtra(Intent.EXTRA_TEXT, "");
         i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://www.linkedin.com/"));
+        i.setData(Uri.parse("https://www.linkedin.com/in/oliver-bozinovski/"));
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }
-    @OnClick(R.id.text2)
+    @OnClick(R.id.progrmer2)
     public void Click2 (View view){
 
         Intent i = new Intent();
         i.putExtra(Intent.EXTRA_TEXT, "");
         i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://www.linkedin.com/"));
+        i.setData(Uri.parse("https://www.linkedin.com/in/marko-donovski-756870158/"));
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }
-    @OnClick(R.id.text3)
+    @OnClick(R.id.progrmer3)
     public void Click3 (View view){
 
         Intent i = new Intent();
         i.putExtra(Intent.EXTRA_TEXT, "");
         i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://www.linkedin.com/"));
+        i.setData(Uri.parse("https://www.linkedin.com/in/pance-dimovski-767856158/"));
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }
-    @OnClick(R.id.text4)
+    @OnClick(R.id.progrmer4)
     public void Click4 (View view){
 
 
         Intent i = new Intent();
         i.putExtra(Intent.EXTRA_TEXT, "");
         i.setAction(Intent.ACTION_VIEW);
-        i.setData(Uri.parse("https://www.linkedin.com/"));
+        i.setData(Uri.parse("https://www.linkedin.com/in/goran-voinovski-078760158/"));
         startActivity(i);
         Toast.makeText(this, "dasdas", Toast.LENGTH_LONG).show();
     }

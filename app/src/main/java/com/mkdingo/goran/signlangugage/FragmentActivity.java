@@ -1,5 +1,6 @@
 package com.mkdingo.goran.signlangugage;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -32,8 +33,6 @@ public class FragmentActivity extends AppCompatActivity {
     VPagerAdapterAzbuka adapterAzbuka;
     @BindView(R.id.textNazbor)
     TextView tekstodzbor;
-    @BindView(R.id.prevbtn)
-    ImageButton previousbtn;
     public @BindView(R.id.nextbtn)
     ImageButton nextbutton;
     @BindView(R.id.llBukvi)
@@ -49,6 +48,7 @@ public class FragmentActivity extends AppCompatActivity {
     LinearLayout.LayoutParams params;
     User user;
     public Zborovi zborovi;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +57,7 @@ public class FragmentActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         user = SharedPreferences.getUser(this);
         slikilista = SharedPreferences.getAzbuka(this);
-        Intent intent = getIntent();
+        intent = getIntent();
         if (intent.hasExtra("EXTRA")){
             start = "start";
             zborovi = (Zborovi) intent.getSerializableExtra("EXTRA");
@@ -93,7 +93,6 @@ public class FragmentActivity extends AppCompatActivity {
                     }
                 }else {
                     nextbutton.setVisibility(View.INVISIBLE);
-                    previousbtn.setVisibility(View.INVISIBLE);
                     tekstodzbor.setText(zborovi.text);
                 }
             } else {
@@ -111,31 +110,6 @@ public class FragmentActivity extends AppCompatActivity {
                     return true;
                 }
             });
-
-            previousbtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    if (pozicijaBukva > 0){
-                        pozicijaBukva--;
-                    }else if (pozicijaBukva < 0){
-                        pozicijaBukva = 0;
-                    }
-
-                    viewPager.setCurrentItem(pozicijaBukva);
-                    for (int i = pozicijaBukva; i < myTextViews.size(); i--) {
-
-                        if (i != pozicijaBukva){
-                            myTextViews.get(i).setTextColor(getResources().getColor(R.color.grey_700));
-                            myTextViews.get(i).setTextSize(30);
-                        }else {
-                            myTextViews.get(i).setTextColor(getResources().getColor(android.R.color.white));
-                            myTextViews.get(i).setTextSize(50);
-                        }
-                    }
-                }
-            });
-
         }else {
 
             adapterAzbuka = new VPagerAdapterAzbuka(getSupportFragmentManager());
@@ -151,8 +125,15 @@ public class FragmentActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this,Home.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(FragmentActivity.this,Home.class);
+        if (intent.hasExtra("EXTRA2")){
+            intent2.putExtra("Vrakanje2","Vrakanje2");
+        }
+        intent2.putExtra("Vrakanje","Vrakanje");
+        startActivity(intent2);
         finish();
     }
+
+
+
 }

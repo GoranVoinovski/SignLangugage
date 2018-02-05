@@ -11,20 +11,30 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:fitsSystemWindows="true"
-        android:padding="10dp"
         android:background="@color/portokalova"
         android:theme="@style/AppTheme.AppBarOverlay"
         android:layout_height="90dp">
 
 
-
-         <android.support.v7.widget.Toolbar
+        <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="80dp"
             app:layout_collapseMode="pin"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+            <ImageView
+                android:id="@+id/brainster"
+                android:layout_width="60dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right|top"
+                android:src="@drawable/brainster"/>
+
+
+        </android.support.v7.widget.Toolbar>
+
 
     </android.support.design.widget.AppBarLayout>
 

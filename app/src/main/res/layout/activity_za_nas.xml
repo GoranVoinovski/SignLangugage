@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-  android:background="@color/white"
+    android:background="@color/portokalova"
     tools:context="com.mkdingo.goran.signlangugage.ZaNasActivity">
 
     <RelativeLayout
@@ -24,6 +23,9 @@
 
         <TextView
             android:id="@+id/textb"
+            android:gravity="center"
+            android:textColor="@color/black"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_below="@id/slikab"
             android:layout_width="match_parent"
             android:layout_height="30dp" />
@@ -42,7 +44,11 @@
         <TextView
             android:id="@+id/text1"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:gravity="start|center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/white"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_height="50dp"
             android:layout_toRightOf="@+id/slika1"/>
         <ImageView
             android:id="@+id/slika1"
@@ -68,9 +74,13 @@
 
         <TextView
             android:id="@+id/text2"
+            android:gravity="start|center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/white"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_toRightOf="@id/slika2"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="50dp" />
 
 
 
@@ -93,9 +103,13 @@
 
         <TextView
             android:id="@+id/text3"
+            android:gravity="start|center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/white"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_toRightOf="@id/slika3"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="50dp" />
 
     </RelativeLayout>
 
@@ -116,9 +130,13 @@
 
         <TextView
             android:id="@+id/text4"
+            android:gravity="start|center"
+            android:paddingLeft="5dp"
+            android:textColor="@color/white"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_toRightOf="@id/slika4"
             android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:layout_height="50dp" />
 
     </RelativeLayout>
 

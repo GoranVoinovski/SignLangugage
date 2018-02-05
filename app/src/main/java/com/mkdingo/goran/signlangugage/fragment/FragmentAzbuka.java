@@ -1,5 +1,6 @@
 package com.mkdingo.goran.signlangugage.fragment;
 
+import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -44,30 +45,10 @@ public class FragmentAzbuka extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_azbuka, null);
         mUnbind = ButterKnife.bind(this, view);
-
         sliki = (StaticniSliki) getArguments().getSerializable("Slika");
         bukvaPrikaz.setText(sliki.bukva + "");
-        pic1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
+        PlayVideo();
 
-        String path = "android.resource://" + getActivity().getPackageName() + "/" + sliki.Slika.slika;
-        pic1.setVideoPath(path);
-        if (((FragmentActivity)getActivity()).start.equals("")){
-            pic1.start();
-            ((FragmentActivity)getActivity()).start = "new";
-        }
-        ((FragmentActivity)getActivity()).viewPager.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-              pic1.start();
-
-                return false;
-            }
-        });
 
         return view;
     }
@@ -78,5 +59,42 @@ public class FragmentAzbuka extends Fragment {
         mUnbind.unbind();
     }
 
+
+    public void PlayVideo(){
+
+        pic1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+        String path = "android.resource://" + getActivity().getPackageName() + "/" + sliki.Slika.slika;
+        pic1.setVideoPath(path);
+        if (((FragmentActivity)getActivity()).start.equals("")){
+            pic1.start();
+            ((FragmentActivity)getActivity()).start = "new";
+        }
+        ((FragmentActivity)getActivity()).viewPager.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                pic1.start();
+
+                return false;
+            }
+        });
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        pic1.stopPlayback();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        pic1.start();
+    }
 }
 

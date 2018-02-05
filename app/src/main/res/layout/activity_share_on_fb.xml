@@ -4,35 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/forma2"
+    android:background="@color/white"
     tools:context="com.mkdingo.goran.signlangugage.shareOnFBActivity">
 
     <FrameLayout
         android:background="@drawable/forma2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="300dp">
 
         <TextView
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:layout_marginHorizontal="160dp"
-            android:textSize="50dp"
             android:id="@+id/textSoIme"
-            android:textColor="@color/White"
-            style="@style/Base.TextAppearance.AppCompat.Large"
-            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@color/portokalova"
+            android:textSize="50sp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center|top"
             android:layout_height="100dp" />
 
         <VideoView
             android:id="@+id/slideshow"
-            android:textColor="@color/White"
-            android:layout_marginTop="100dp"
-            style="@style/Base.TextAppearance.AppCompat.Large"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
             android:scaleType="fitCenter"
-            android:layout_height="200dp" />
-
-
+            android:textColor="@color/White" />
 
     </FrameLayout>
 
@@ -44,6 +40,7 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:gravity="center"
+        android:textColor="@color/portokalova"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="40dp"/>
@@ -62,6 +59,7 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:gravity="center"
+        android:textColor="@color/portokalova"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="50dp"

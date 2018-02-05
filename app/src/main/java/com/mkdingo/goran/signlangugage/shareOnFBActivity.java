@@ -143,6 +143,22 @@ public class shareOnFBActivity extends AppCompatActivity {
                 }
             }, 0, 5000);
 
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new TimerTask() {
+                    @Override
+                    public void run() {
+
+                        a = zbor.bukvi.get(count2++);
+                        imeSoTekst.setText("" + a);
+                        if (count2 >= zbor.bukvi.size()) {
+                            count2 = 0;
+                        }
+                    }
+                });
+            }
+        }, 0, 5000);
 
 
     }

@@ -26,6 +26,7 @@ import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
 import com.mkdingo.goran.signlangugage.klasi.StaticniSliki;
 import com.mkdingo.goran.signlangugage.klasi.User;
 import com.mkdingo.goran.signlangugage.listener.OnRowBuvkaClickListener;
+import com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -46,6 +47,7 @@ public class Azbuka extends Fragment {
     RecyclerViewAdapterAzbuka adapter;
     User user;
     SlikiAzbuka staticniSliki;
+    int navrakanje = 0;
 
     @Nullable
     @Override
@@ -67,22 +69,31 @@ public class Azbuka extends Fragment {
         adapter = new RecyclerViewAdapterAzbuka(getActivity(),new OnRowBuvkaClickListener() {
             @Override
             public void onRowClick(StaticniSliki model, int position) {
-
+                android.content.SharedPreferences settings = getActivity().getSharedPreferences("YOUR_PREF_NAME", 0);
+                android.content.SharedPreferences.Editor editor = settings.edit();
+                editor.putInt("SNOW_DENSITY",position);
+                editor.commit();
                 Intent intent1 = new Intent(getActivity(), FragmentActivity.class);
                 intent1.putExtra("EXTRA2", model);
                 intent1.putExtra("POSITION2", position);
                 intent1.putExtra("FLAG2", "FLAG2");
-                startActivity(intent1);
+                startActivityForResult(intent1,1111);
             }
         });
 
 
 
-
+        Intent intentpozicija = getActivity().getIntent();
         adapter.setItems(staticniSliki.slikiBukvi);
 
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        if (intentpozicija.hasExtra("Vrakanje2")){
+            android.content.SharedPreferences settings = getActivity().getSharedPreferences("YOUR_PREF_NAME", 0);
+            navrakanje = settings.getInt("SNOW_DENSITY", 0);
+            ((Home)getActivity()).vPage.setCurrentItem(1);
+            rv.scrollToPosition(navrakanje);
+        }
         rv.setAdapter(adapter);
 
 
@@ -95,4 +106,5 @@ public class Azbuka extends Fragment {
         super.onDestroy();
         mUnbind.unbind();
     }
+
 }

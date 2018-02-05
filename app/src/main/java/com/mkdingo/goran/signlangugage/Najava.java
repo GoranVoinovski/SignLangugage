@@ -12,7 +12,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mkdingo.goran.signlangugage.klasi.Sliki;
 import com.mkdingo.goran.signlangugage.klasi.SlikiAzbuka;
@@ -101,7 +100,7 @@ public class Najava extends AppCompatActivity {
         user.zborovi = new ArrayList<>();
         Zborovi zbor1 = new Zborovi();
         zbor1.contents = PovleciSlikiZaZbor(PopolniLista(user.name), slikiAzbuka());
-        zbor1.text = "Јас сум " + user.name;
+        zbor1.text = "Јас се викам " + user.name;
         zbor1.bukvi = PopolniLista(user.name);
 
         Zborovi zbor2 = new Zborovi();
@@ -393,6 +392,86 @@ public class Najava extends AppCompatActivity {
         slikaZbor33.slika = R.raw.zosto;
         zbor33.contents.add(slikaZbor33);
 
+        Zborovi zbor34 = new Zborovi();
+        zbor34.contents = new ArrayList<>();
+        zbor34.text = "Јас сум добра";
+        zbor34.bukvi = PopolniLista("");
+        Sliki slikaZbor34 = new Sliki();
+        slikaZbor34.tag = "gif";
+        slikaZbor34.slika = R.raw.jas_sum_dobra;
+        zbor34.contents.add(slikaZbor34);
+        Zborovi zbor35 = new Zborovi();
+        zbor35.contents = new ArrayList<>();
+        zbor35.text = "Јас знам добро знаковен јазик";
+        zbor35.bukvi = PopolniLista("");
+        Sliki slikaZbor35 = new Sliki();
+        slikaZbor35.tag = "gif";
+        slikaZbor35.slika = R.raw.jas_znam_dobro_znakoven_jazik;
+        zbor35.contents.add(slikaZbor35);
+        Zborovi zbor36 = new Zborovi();
+        zbor36.contents = new ArrayList<>();
+        zbor36.text = "Јас знам малку знаковен јазик";
+        zbor36.bukvi = PopolniLista("");
+        Sliki slikaZbor36 = new Sliki();
+        slikaZbor36.tag = "gif";
+        slikaZbor36.slika = R.raw.jas_znam_malku_znakoven_jazik;
+        zbor36.contents.add(slikaZbor36);
+        Zborovi zbor37 = new Zborovi();
+        zbor37.contents = new ArrayList<>();
+        zbor37.text = "Кои";
+        zbor37.bukvi = PopolniLista("");
+        Sliki slikaZbor37 = new Sliki();
+        slikaZbor37.tag = "gif";
+        slikaZbor37.slika = R.raw.koi;
+        zbor37.contents.add(slikaZbor37);
+        Zborovi zbor38 = new Zborovi();
+        zbor38.contents = new ArrayList<>();
+        zbor38.text = "Не давам";
+        zbor38.bukvi = PopolniLista("");
+        Sliki slikaZbor38 = new Sliki();
+        slikaZbor38.tag = "gif";
+        slikaZbor38.slika = R.raw.ne_davam;
+        zbor38.contents.add(slikaZbor38);
+        Zborovi zbor39 = new Zborovi();
+        zbor39.contents = new ArrayList<>();
+        zbor39.text = "Не знам знаковен јазик";
+        zbor39.bukvi = PopolniLista("");
+        Sliki slikaZbor39 = new Sliki();
+        slikaZbor39.tag = "gif";
+        slikaZbor39.slika = R.raw.ne_znam_znakoven_jazik;
+        zbor39.contents.add(slikaZbor39);
+        Zborovi zbor40 = new Zborovi();
+        zbor40.contents = new ArrayList<>();
+        zbor40.text = "Ти дали си глув";
+        zbor40.bukvi = PopolniLista("");
+        Sliki slikaZbor40 = new Sliki();
+        slikaZbor40.tag = "gif";
+        slikaZbor40.slika = R.raw.ti_dali_si_gluv;
+        zbor40.contents.add(slikaZbor40);
+        Zborovi zbor41 = new Zborovi();
+        zbor41.contents = new ArrayList<>();
+        zbor41.text = "Ти како се викаш";
+        zbor41.bukvi = PopolniLista("");
+        Sliki slikaZbor41 = new Sliki();
+        slikaZbor41.tag = "gif";
+        slikaZbor41.slika = R.raw.ti_kako_se_vikas;
+        zbor41.contents.add(slikaZbor41);
+        Zborovi zbor42 = new Zborovi();
+        zbor42.contents = new ArrayList<>();
+        zbor42.text = "Ве молам";
+        zbor42.bukvi = PopolniLista("");
+        Sliki slikaZbor42 = new Sliki();
+        slikaZbor42.tag = "gif";
+        slikaZbor42.slika = R.raw.vemolam;
+        zbor42.contents.add(slikaZbor42);
+        Zborovi zbor43 = new Zborovi();
+        zbor43.contents = new ArrayList<>();
+        zbor43.text = "Ве молам запишете";
+        zbor43.bukvi = PopolniLista("");
+        Sliki slikaZbor43 = new Sliki();
+        slikaZbor43.tag = "gif";
+        slikaZbor43.slika = R.raw.vemolamzapisete;
+        zbor43.contents.add(slikaZbor43);
 
 
 
@@ -429,9 +508,16 @@ public class Najava extends AppCompatActivity {
         user.zborovi.add(zbor31);
         user.zborovi.add(zbor32);
         user.zborovi.add(zbor33);
-
-
-
+        user.zborovi.add(zbor34);
+        user.zborovi.add(zbor35);
+        user.zborovi.add(zbor36);
+        user.zborovi.add(zbor37);
+        user.zborovi.add(zbor38);
+        user.zborovi.add(zbor39);
+        user.zborovi.add(zbor40);
+        user.zborovi.add(zbor41);
+        user.zborovi.add(zbor42);
+        user.zborovi.add(zbor43);
 
     }
 
@@ -460,13 +546,13 @@ public class Najava extends AppCompatActivity {
     public ArrayList<StaticniSliki> slikiAzbuka() {
         ArrayList<StaticniSliki> slikiArrayList = new ArrayList<>();
         Sliki slika_a = new Sliki();
-        slika_a.slika = R.raw.a;
+        slika_a.slika = R.raw.test2;
         slika_a.tag = "jpg";
         StaticniSliki slikaA = new StaticniSliki(slika_a, 'А');
         slikiArrayList.add(slikaA);
 
         Sliki slika_б = new Sliki();
-        slika_б.slika = R.raw.b;
+        slika_б.slika = R.raw.test2;
         slika_б.tag = "jpg";
         StaticniSliki slikaБ = new StaticniSliki(slika_б, 'Б');
         slikiArrayList.add(slikaБ);

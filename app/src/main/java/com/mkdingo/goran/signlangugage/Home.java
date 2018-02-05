@@ -3,6 +3,7 @@ package com.mkdingo.goran.signlangugage;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -37,6 +38,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,7 +46,7 @@ public class Home extends AppCompatActivity
     public @BindView(R.id.vp)ViewPager vPage;
     @BindView(R.id.tablayout)TabLayout tabs;
     public User user;
-
+    public int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,11 @@ public class Home extends AppCompatActivity
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         ButterKnife.bind(this);
+
+
         user = com.mkdingo.goran.signlangugage.sharedPreferences.SharedPreferences.getUser(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -138,6 +144,7 @@ public class Home extends AppCompatActivity
         } else if (id==R.id.promenaIme){
             Intent intent2 = new Intent(Home.this,Najava.class);
             startActivity(intent2);
+            finish();
         }
         else if (id == R.id.about) {
 
@@ -149,6 +156,15 @@ public class Home extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @OnClick(R.id.brainster)
+     public void Klik(View view){
+               Intent i = new Intent();
+                i.putExtra(Intent.EXTRA_TEXT, "");
+                i.setAction(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://brainster.co/"));
+                startActivity(i);
     }
 
 
