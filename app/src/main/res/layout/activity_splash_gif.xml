@@ -31,7 +31,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@mipmap/arrow_right"
-        android:textColor="@color/White" />
+         />
 
 
 </RelativeLayout>
