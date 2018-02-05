@@ -17,7 +17,6 @@
             android:gravity="center"
             android:layout_marginLeft="50dp"
             android:text="TEKST"
-            android:fontFamily="@font/macswiss"
             android:textColor="@color/white"
             android:textSize="23sp" />
 

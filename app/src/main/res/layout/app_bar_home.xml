@@ -26,11 +26,12 @@
 
             <ImageView
                 android:id="@+id/brainster"
-                android:layout_width="60dp"
+                android:layout_width="100dp"
                 android:layout_marginRight="10dp"
-                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp"
                 android:layout_gravity="right|top"
-                android:src="@drawable/brainster"/>
+                android:src="@drawable/brainster2"/>
 
 
         </android.support.v7.widget.Toolbar>
